@@ -1,0 +1,5 @@
+(spacemacs/set-leader-keys "o t i" 'timeclock/in)
+(spacemacs/set-leader-keys "o t o" 'timeclock/out)
+(spacemacs/set-leader-keys "o t l" 'timeclock-visit-timelog)
+(spacemacs/set-leader-keys "o t t" 'timeclock/print-day-report)
+(spacemacs/set-leader-keys "o t r" 'timeclock-reread-log)

@@ -1,0 +1,30 @@
+#+TITLE: timeclock layer
+
+# TOC links should be GitHub style anchors.
+* Table of Contents                                        :TOC_4_gh:noexport:
+- [[#description][Description]]
+- [[#install][Install]]
+- [[#key-bindings][Key bindings]]
+
+* Description
+This layer is a thing wrapper around the =timeclock= package. It simply adds a
+few handy keyboard shortcuts and a daily report.
+
+* Install
+To use this configuration layer, add it to your =~/.spacemacs=. You will need to
+add =timeclock= to the existing =dotspacemacs-configuration-layers= list in this
+file.
+
+* Key bindings
+
+| Key Binding | Description                   |
+|-------------+-------------------------------|
+| ~SPC o t i~ | Report current activity       |
+| ~SPC o t o~ | Clock out of current activity |
+| ~SPC o t l~ | Visit timelog file            |
+| ~SPC o t t~ | Print today's report          |
+| ~SPC o t r~ | Re-read log file              |
+
+
+Unlike timeclocks's built in =timeclock-in= function, this version does not require
+you to clock out of the current activity before reporting a new one.

@@ -1,0 +1,10 @@
+(defun misc//projectile-toogle-between-implementation-and-test-splitting ()
+  (interactive)
+  (split-window-right-and-focus)
+  (projectile-toggle-between-implementation-and-test))
+
+(defun misc//neotree-find-in-project ()
+  (interactive)
+  (if (neo-global--window-exists-p)
+      (neotree-hide))
+  (neotree-find-project-root))

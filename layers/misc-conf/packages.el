@@ -15,6 +15,7 @@
   '(
     avy
     drag-stuff
+    magit
     neotree
     projectile
     )

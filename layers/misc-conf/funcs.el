@@ -8,3 +8,10 @@
   (if (neo-global--window-exists-p)
       (neotree-hide))
   (neotree-find-project-root))
+
+(defun misc/backup-branch ()
+  (interactive)
+  (let* ((current-branch (magit-get-current-branch))
+         (backup-name (concat "backup/" current-branch)))
+    (if (stringp current-branch)
+        (magit-branch backup-name current-branch "-f"))))

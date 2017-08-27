@@ -1,0 +1,26 @@
+#+TITLE: org-notes layer
+
+# TOC links should be GitHub style anchors.
+* Table of Contents                                        :TOC_4_gh:noexport:
+- [[#description][Description]]
+- [[#install][Install]]
+- [[#usage][Usage]]
+
+* Description
+Utility functions and keybindings to create layers in org mode.
+
+See https://github.com/juanedi/orgnotes
+
+* Install
+To use this configuration layer, add it to your =~/.spacemacs=. You will need to
+add =org-notes= to the existing =dotspacemacs-configuration-layers= list in this
+file.
+
+* Usage
+
+The following interactive funcitons are provided
+
+| Function                     | Description                                                            |
+|------------------------------+------------------------------------------------------------------------|
+| ~org-notes/new-note~         | Create a new note with title header                                    |
+| ~org-notes/new-pivotal-note~ | Create a new new with useful template to track Pivotal Tracker stories |

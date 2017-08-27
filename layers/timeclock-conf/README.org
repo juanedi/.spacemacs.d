@@ -7,13 +7,13 @@
 - [[#key-bindings][Key bindings]]
 
 * Description
-This layer is a thing wrapper around the =timeclock= package. It simply adds a
+This layer is a thin wrapper around the =timeclock= package. It simply adds a
 few handy keyboard shortcuts and a daily report.
 
 * Install
 To use this configuration layer, add it to your =~/.spacemacs=. You will need to
-add =timeclock= to the existing =dotspacemacs-configuration-layers= list in this
-file.
+add =timeclock-confg= to the existing =dotspacemacs-configuration-layers= list
+in this file.
 
 * Key bindings
 

@@ -11,9 +11,9 @@
 
 ;;; Code:
 
-(defconst timeclock-packages
+(defconst timeclock-conf-packages
   '(timeclock))
 
-(defun timeclock/init-timeclock ())
+(defun timeclock-conf/init-timeclock ())
 
 ;;; packages.el ends here

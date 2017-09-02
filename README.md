@@ -7,7 +7,7 @@ I try to keep my `.spacemacs` as small as possible, moving everything that makes
 
 ```bash
 $ git clone git@github.com:juanedi/.spacemacs.d .spacemacs.d
-$ ln -s .spacemacs.d .spacemacs
+$ ln -s .spacemacs.d/.spacemacs .spacemacs
 ```
 
 ### Using layers only

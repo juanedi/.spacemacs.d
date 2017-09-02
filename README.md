@@ -1,6 +1,6 @@
 # .spacemacs.d
 
-I try to keep my `.spacemacs` as small as possible, moving everything that makes sense to separate configuration layers (idea borrowed from ![this post](http://www.modernemacs.com/post/migrate-layers/)).
+I try to keep my `.spacemacs` as small as possible, moving everything that makes sense to separate configuration layers (idea borrowed from [this post](http://www.modernemacs.com/post/migrate-layers/)).
 
 
 ## Usage

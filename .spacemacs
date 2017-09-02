@@ -49,11 +49,6 @@ values."
      docker
      crystal ;; git clone git@github.com:juanedi/crystal-spacemacs-layer.git ~/.emacs.d/private/crystal
 
-     (auto-completion :variables
-                      auto-completion-enable-help-tooltip t
-                      auto-completion-tab-key-behavior 'cycle
-                      auto-completion-enable-snippets-in-popup t)
-
      ;; Personal configuration layers
      ;; See https://github.com/juanedi/.spacemacs.d
      misc-conf

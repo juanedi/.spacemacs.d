@@ -50,9 +50,9 @@ values."
      crystal ;; git clone git@github.com:juanedi/crystal-spacemacs-layer.git ~/.emacs.d/private/crystal
 
      ;; Personal configuration layers
-     ;; See https://github.com/juanedi/.spacemacs.d
      misc-conf
-     timeclock-conf
+     (timeclock-conf :variables
+                     timeclock-file "~/Dropbox/timelog")
      langs
      org-notes
      )
@@ -318,7 +318,6 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   ; Configuration function for user code.
-
   (setq-default
    evil-normal-state-cursor 'hbar
 

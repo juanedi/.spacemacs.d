@@ -14,6 +14,8 @@
 (defconst timeclock-conf-packages
   '(timeclock))
 
-(defun timeclock-conf/init-timeclock ())
+(defun timeclock-conf/init-timeclock ()
+  ;; timeclock doesn't seem to set up autoloading correctly
+  (require 'timeclock))
 
 ;;; packages.el ends here

@@ -50,7 +50,7 @@ values."
      crystal ;; git clone git@github.com:juanedi/crystal-spacemacs-layer.git ~/.emacs.d/private/crystal
 
      ;; Personal configuration layers
-     misc-conf
+     misc
      (timeclock-conf :variables
                      timeclock-file "~/Dropbox/timelog")
      langs

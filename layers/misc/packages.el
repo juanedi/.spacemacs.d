@@ -1,4 +1,4 @@
-;;; packages.el --- misc-conf layer packages file for Spacemacs.
+;;; packages.el --- misc layer packages file for Spacemacs.
 ;;
 ;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
 ;;
@@ -11,7 +11,7 @@
 
 ;;; Code:
 
-(defconst misc-conf-packages
+(defconst misc-packages
   '(
     avy
     drag-stuff
@@ -21,16 +21,16 @@
     )
 )
 
-(defun misc-conf/post-init-avy ()
+(defun misc/post-init-avy ()
   (setq-default
    avy-background nil
    avy-highlight-first t
    ))
 
-(defun misc-conf/init-drag-stuff ()
+(defun misc/init-drag-stuff ()
   (drag-stuff-global-mode))
 
-(defun misc-conf/post-init-neotree ()
+(defun misc/post-init-neotree ()
   ;; colors
   (defface neo-link-face
     '((((background dark)) (:foreground "#abb2bf"))
@@ -62,7 +62,7 @@
    evil-escape-excluded-major-modes '(neotree-mode)
    ))
 
-(defun misc-conf/post-init-projectile ()
+(defun misc/post-init-projectile ()
   ;; on project switch change neotree root and display an empty buffer
   ;; for some reason, without selecting window-1 the file chosen in
   ;; projectile appears in a new split window
@@ -74,7 +74,7 @@
           (projectile-find-file)
           )))
 
-(defun misc-conf/post-init-ansi-colors ()
+(defun misc/post-init-ansi-colors ()
   (add-hook 'compilation-filter-hook 'misc//colorize-compilation-buffer))
 
 ;;; packages.el ends here

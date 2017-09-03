@@ -23,7 +23,7 @@ Just modify your `.spacemacs` to include the cloned repo in it's layer path:
    dotspacemacs-configuration-layers
    '(
      ;; ...
-     misc-conf
+     misc
      timeclock-conf
      langs
      org-notes

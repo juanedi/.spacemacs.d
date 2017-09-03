@@ -18,6 +18,7 @@
     magit
     neotree
     projectile
+    (ansi-colors :location built-in)
     )
 )
 
@@ -73,5 +74,8 @@
           (winum-select-window-1)
           (projectile-find-file)
           )))
+
+(defun misc-conf/post-init-ansi-colors ()
+  (add-hook 'compilation-filter-hook 'misc//colorize-compilation-buffer))
 
 ;;; packages.el ends here

@@ -15,3 +15,9 @@
          (backup-name (concat "backup/" current-branch)))
     (if (stringp current-branch)
         (magit-branch backup-name current-branch "-f"))))
+
+(defun misc//colorize-compilation-buffer ()
+  "Interpret ansi colors on the compilation buffer. Spacemacs does this by
+default in the spacemacs-ui-visual layer, but seems this fixes some quirks."
+  (let ((inhibit-read-only t))
+    (ansi-color-apply-on-region (point-min) (point-max))))

@@ -53,6 +53,9 @@
   ;; having neotree open breaks layout switching
   (add-hook 'persp-before-switch-functions (lambda (&rest _args) (neotree-hide)))
 
+  ;; Use same binding as in helm to open file in vertical split
+  (evil-define-key 'evilified neotree-mode-map (kbd "C-c o") 'neotree-enter-vertical-split)
+
   (setq-default
    ;; always open neotree focused on the current file
    neo-smart-open t

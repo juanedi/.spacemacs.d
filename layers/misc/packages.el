@@ -15,6 +15,7 @@
   '(
     avy
     drag-stuff
+    magit
     neotree
     projectile
     (ansi-colors :location built-in)
@@ -29,6 +30,9 @@
 
 (defun misc/init-drag-stuff ()
   (drag-stuff-global-mode))
+
+(defun misc/post-init-magit ()
+  (add-hook 'git-commit-mode-hook 'evil-insert-state))
 
 (defun misc/post-init-neotree ()
   ;; colors

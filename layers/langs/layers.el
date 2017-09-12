@@ -12,6 +12,12 @@
    vimscript
    csv
 
+   (syntax-checking
+    :variables
+    syntax-checking-enable-tooltips nil
+    flycheck-highlighting-mode 'lines
+    )
+
    (ruby
     :variables
     ruby-insert-encoding-magic-comment nil

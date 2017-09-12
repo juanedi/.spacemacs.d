@@ -17,5 +17,8 @@
 
 (defun langs/post-init-popwin ()
   (push '("*rspec-compilation*" :dedicated t :position right :stick t :noselect nil :width 0.5)
+        popwin:special-display-config)
+
+  (push '("*Flycheck errors*" :dedicated t :position right :stick t :noselect nil :width 0.4)
         popwin:special-display-config))
 ;;; packages.el ends here

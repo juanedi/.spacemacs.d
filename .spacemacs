@@ -31,9 +31,16 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     ;; Personal configuration layers
+     misc
+     (timeclock-conf :variables timeclock-file "~/Dropbox/timelog")
+     langs
+     org-notes
+
+     ;; Other!
+     better-defaults
      sql
      nginx
-     better-defaults
      emacs-lisp
      git
      markdown
@@ -42,19 +49,11 @@ values."
             shell-default-height 30
             shell-default-position 'bottom)
      ;; spell-checking
-     syntax-checking
      version-control
      osx
      themes-megapack
      docker
      crystal ;; git clone git@github.com:juanedi/crystal-spacemacs-layer.git ~/.emacs.d/private/crystal
-
-     ;; Personal configuration layers
-     misc
-     (timeclock-conf :variables
-                     timeclock-file "~/Dropbox/timelog")
-     langs
-     org-notes
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these

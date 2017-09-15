@@ -39,6 +39,7 @@
 
 ;; Misc
 (spacemacs/set-leader-keys "o e" 'eval-print-last-sexp)
+(spacemacs/set-leader-keys "o f y" 'misc/show-and-copy-relative-buffer-filename)
 
 ;; CMD+S saves file and exits insert mode
 (define-key evil-insert-state-map (kbd "s-s") (lambda () (interactive)

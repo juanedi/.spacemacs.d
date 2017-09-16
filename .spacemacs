@@ -36,6 +36,7 @@ values."
      (timeclock-conf :variables timeclock-file "~/Dropbox/timelog")
      langs
      org-notes
+     theming-customizations
 
      ;; Other!
      better-defaults
@@ -306,8 +307,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq-default
    ;; do not warn if setting variables in .zshrc instead of .zshenv
    exec-path-from-shell-check-startup-files nil
-   )
-  )
+   ))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.

@@ -359,6 +359,7 @@ you should place your code here."
 
   (global-centered-cursor-mode)
   (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
+  (misc//customize-flycheck-popups)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

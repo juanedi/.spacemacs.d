@@ -29,3 +29,21 @@
 default in the spacemacs-ui-visual layer, but seems this fixes some quirks."
   (let ((inhibit-read-only t))
     (ansi-color-apply-on-region (point-min) (point-max))))
+
+(defun misc//customize-flycheck-popups ()
+  ;; ugly hack!
+  ;; right now flycheck-popup-tip does now allow customizing the error format
+  ;; nor the margins used.
+  ;; it should probably be cleaner to do this using defadvice, or making a PR :)
+    (with-eval-after-load 'flycheck-popup-tip
+      (defun flycheck-popup-tip-show-popup (errors)
+        "Display ERRORS, using popup.el library."
+        (flycheck-popup-tip-delete-popup)
+        (when errors
+          (setq flycheck-popup-tip-object
+                (popup-tip
+                 (concat "\n "(flycheck-popup-tip-format-errors errors) "\n")
+                 :nostrip t
+                 :margin 2
+                 :nowait t))
+          (add-hook 'pre-command-hook 'flycheck-popup-tip-delete-popup nil t)))))

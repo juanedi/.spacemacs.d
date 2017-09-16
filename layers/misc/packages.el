@@ -19,6 +19,7 @@
     neotree
     projectile
     (ansi-colors :location built-in)
+    flycheck-popup-tip
     )
 )
 
@@ -84,4 +85,10 @@
 (defun misc/post-init-ansi-colors ()
   (add-hook 'compilation-filter-hook 'misc//colorize-compilation-buffer))
 
+(defun misc/init-flycheck-popup-tip ()
+  (use-package flycheck-pos-tip
+    :defer t
+    :init
+    (with-eval-after-load 'flycheck
+      (add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode))))
 ;;; packages.el ends here

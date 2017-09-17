@@ -30,6 +30,11 @@ default in the spacemacs-ui-visual layer, but seems this fixes some quirks."
   (let ((inhibit-read-only t))
     (ansi-color-apply-on-region (point-min) (point-max))))
 
+(defun misc//flycheck-first-error ()
+  "Go to first flycheck error in the current buffer, regardless of whether it was already inspected or not."
+  (interactive)
+  (flycheck-next-error 1 t))
+
 (defun misc//customize-flycheck-popups ()
   ;; ugly hack!
   ;; right now flycheck-popup-tip does now allow customizing the error format

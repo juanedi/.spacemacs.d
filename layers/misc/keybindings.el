@@ -38,7 +38,8 @@
 
 
 ;; Misc
-(spacemacs/set-leader-keys "o e" 'eval-print-last-sexp)
+(spacemacs/set-leader-keys "o e f" 'misc//flycheck-first-error)
+;; (spacemacs/set-leader-keys "o e p" 'eval-print-last-sexp)
 (spacemacs/set-leader-keys "o f y" 'misc/show-and-copy-relative-buffer-filename)
 
 ;; CMD+S saves file and exits insert mode

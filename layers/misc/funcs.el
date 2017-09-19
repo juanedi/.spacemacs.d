@@ -47,8 +47,10 @@ default in the spacemacs-ui-visual layer, but seems this fixes some quirks."
         (when errors
           (setq flycheck-popup-tip-object
                 (popup-tip
-                 (concat "\n "(flycheck-popup-tip-format-errors errors) "\n")
+                 (concat (flycheck-popup-tip-format-errors errors) "\n")
                  :nostrip t
                  :margin 2
-                 :nowait t))
+                 :nowait t
+                 :height 50
+                 ))
           (add-hook 'pre-command-hook 'flycheck-popup-tip-delete-popup nil t)))))

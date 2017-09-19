@@ -1,7 +1,7 @@
 (setq theming-modifications
       '(
         (spacegray
-         (popup-tip-face :inherit 'flycheck-error-list-highlight)
+         (popup-tip-face :background "#f5f5f5" :foreground "#232830")
          )
         (sanityinc-tomorrow-night
          (popup-tip-face :inherit 'highlight)

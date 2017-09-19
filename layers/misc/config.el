@@ -1,1 +1,1 @@
-(setq-default flycheck-popup-tip-error-prefix nil)
+(setq-default flycheck-popup-tip-error-prefix "\n")

@@ -12,4 +12,10 @@
     syntax-checking-enable-tooltips nil
     flycheck-highlighting-mode 'lines
     )
+
+   (helm
+    :variables
+    ; do not limit buffer name width when swithing buffers using helm
+    helm-buffer-max-length 50
+    )
    ))

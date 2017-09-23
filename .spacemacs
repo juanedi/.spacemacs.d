@@ -37,6 +37,7 @@ values."
      langs
      org-notes
      theming-customizations
+     elm-test
 
      ;; Other!
      better-defaults

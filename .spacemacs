@@ -37,7 +37,13 @@ values."
      langs
      org-notes
      theming-customizations
-     elm-test
+     (elm-test
+      :variables
+      elm-test-find-project-root (lambda () (locate-dominating-file
+                                             (buffer-file-name)
+                                             "script"))
+      elm-test-command "./script/elm-test"
+      )
 
      ;; Other!
      better-defaults

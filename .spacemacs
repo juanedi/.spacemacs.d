@@ -37,13 +37,7 @@ values."
      langs
      org-notes
      theming-customizations
-     (elm-test
-      :variables
-      elm-test-run-directory-for-file (lambda (current-file-name)
-                                        (locate-dominating-file current-file-name "script"))
-      elm-test-command "./script/elm-test"
-      elm-test-preferred-test-suffix "Spec"
-      )
+     elm-test
 
      ;; Other!
      better-defaults

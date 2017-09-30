@@ -30,7 +30,7 @@
 ;;; Code:
 
 (defconst org-notes-packages
-  '(org)
+  '()
 )
 
 

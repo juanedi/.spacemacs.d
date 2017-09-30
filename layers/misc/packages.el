@@ -15,7 +15,6 @@
   '(
     avy
     drag-stuff
-    magit
     neotree
     projectile
     (ansi-colors :location built-in)

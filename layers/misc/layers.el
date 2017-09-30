@@ -18,4 +18,9 @@
     ; do not limit buffer name width when swithing buffers using helm
     helm-buffer-max-length 50
     )
+
+   (git
+    :variables
+    git-magit-status-fullscreen t
+    )
    ))

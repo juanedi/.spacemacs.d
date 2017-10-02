@@ -7,7 +7,7 @@
    yaml
    clojure
    elixir
-   latex
+   ;; latex
    purescript
    vimscript
    csv

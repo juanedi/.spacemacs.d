@@ -37,7 +37,9 @@ values."
      langs
      org-notes
      theming-customizations
-     elm-test
+
+     elm-test ; git clone git@github.com:juanedi/elm-test-spacemacs-layer.git ~/.emacs.d/private/elm-test
+     crystal  ; git clone git@github.com:juanedi/crystal-spacemacs-layer.git ~/.emacs.d/private/crystal
 
      ;; Other!
      better-defaults
@@ -55,7 +57,6 @@ values."
      osx
      themes-megapack
      docker
-     crystal ;; git clone git@github.com:juanedi/crystal-spacemacs-layer.git ~/.emacs.d/private/crystal
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these

@@ -12,4 +12,8 @@
          (popup-tip-face :background "grey20" :foreground "white")
          (fringe :background "#ffffff")
          )
+        (sanityinc-tomorrow-bright
+         (popup-tip-face :background "#424242")
+         (fringe :background "#000000")
+         )
         ))

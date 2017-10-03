@@ -54,3 +54,18 @@ default in the spacemacs-ui-visual layer, but seems this fixes some quirks."
                  :height 50
                  ))
           (add-hook 'pre-command-hook 'flycheck-popup-tip-delete-popup nil t)))))
+
+(autoload 'projectile-switch-project-by-name "projectile")
+
+(defun misc/open-or-create-perspective (project)
+  (if (member project (persp-names-current-frame-fast-ordered))
+      (persp-switch project)
+    (let ((persp-reset-windows-on-nil-window-conf t))
+      (persp-switch project)
+      (projectile-switch-project-by-name project))))
+
+(defun misc/set-project-shortcut (key project)
+  (lexical-let ((project project))
+    (spacemacs/set-leader-keys (concat "o l " key)
+      (lambda () (interactive)
+        (misc/open-or-create-perspective project)))))

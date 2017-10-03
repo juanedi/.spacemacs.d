@@ -42,6 +42,10 @@
 ;; (spacemacs/set-leader-keys "o e p" 'eval-print-last-sexp)
 (spacemacs/set-leader-keys "o f y" 'misc/show-and-copy-relative-buffer-filename)
 
+(misc/set-project-shortcut "n" "~/Dropbox/Apps/org-notes/")
+(misc/set-project-shortcut "i" "~/code/NoRedInk/")
+(misc/set-project-shortcut "s" "~/.spacemacs.d/")
+
 ;; CMD+S saves file and exits insert mode
 (define-key evil-insert-state-map (kbd "s-s") (lambda () (interactive)
                                                 (progn

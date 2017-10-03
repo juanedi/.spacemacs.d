@@ -73,6 +73,8 @@
   ;; on project switch change neotree root and display an empty buffer
   ;; for some reason, without selecting window-1 the file chosen in
   ;; projectile appears in a new split window
+  (spacemacs/declare-prefix "o l" "persp-switch")
+
   (setq projectile-switch-project-action
         (lambda ()
           (spacemacs/new-empty-buffer)

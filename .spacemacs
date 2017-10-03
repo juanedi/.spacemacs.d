@@ -325,7 +325,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq-default
    ;; do not warn if setting variables in .zshrc instead of .zshenv
    exec-path-from-shell-check-startup-files nil
-   ))
+   )
+  (setq custom-file "~/.spacemacs.d/custom.el")
+  )
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -375,7 +377,8 @@ you should place your code here."
   (global-centered-cursor-mode)
   (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
   (misc//customize-flycheck-popups)
-  )
 
-;; Do not write anything past this comment. This is where Emacs will
-;; auto-generate custom variable definitions.
+  ;; load customized settings
+  (when (file-exists-p custom-file)
+    (load-file custom-file))
+  )

@@ -327,6 +327,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
    exec-path-from-shell-check-startup-files nil
    )
   (setq custom-file "~/.spacemacs.d/custom.el")
+  (setq local-config-file "~/config.local.el")
   )
 
 (defun dotspacemacs/user-config ()
@@ -381,4 +382,8 @@ you should place your code here."
   ;; load customized settings
   (when (file-exists-p custom-file)
     (load-file custom-file))
+
+  ;; arbitrary stuff
+  (when (file-exists-p local-config-file)
+    (load-file local-config-file))
   )

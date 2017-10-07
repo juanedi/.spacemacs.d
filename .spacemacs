@@ -375,7 +375,6 @@ you should place your code here."
 
   (setq mac-command-modifier 'super)
 
-  (global-centered-cursor-mode)
   (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
   (misc//customize-flycheck-popups)
 
@@ -386,6 +385,11 @@ you should place your code here."
    display-time-default-load-average nil
    )
   (display-time-mode t)
+
+  ;; enable centered-cursor for text and programming buffers
+  ;; leaves out interactive interpreters, documentation, etc.
+  (add-hook 'prog-mode-hook 'centered-cursor-mode)
+  (add-hook 'text-mode-hook 'centered-cursor-mode)
 
   ;; load customized settings
   (when (file-exists-p custom-file)

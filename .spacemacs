@@ -379,6 +379,14 @@ you should place your code here."
   (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
   (misc//customize-flycheck-popups)
 
+  ;; display time in mode line
+  (setq
+   display-time-24hr-format t
+   display-time-day-and-date t
+   display-time-default-load-average nil
+   )
+  (display-time-mode t)
+
   ;; load customized settings
   (when (file-exists-p custom-file)
     (load-file custom-file))

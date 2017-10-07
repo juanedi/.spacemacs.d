@@ -49,7 +49,8 @@
 ;; Example: the following code bind "SPC o l c" to ~/code/cool-project
 ;;
 ;;   (misc/set-project-shortcut "p" "cool-project" "~/Dropbox/Apps/cool-project/")
-(spacemacs/set-leader-keys "o l L" 'spacemacs/helm-persp-switch-project)
+(spacemacs/declare-prefix "o l" "persp-switch")
+(spacemacs/set-leader-keys "o l l" 'spacemacs/helm-persp-switch-project)
 
 ;; CMD+S saves file and exits insert mode
 (define-key evil-insert-state-map (kbd "s-s") (lambda () (interactive)

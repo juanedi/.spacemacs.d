@@ -42,9 +42,10 @@
 ;; (spacemacs/set-leader-keys "o e p" 'eval-print-last-sexp)
 (spacemacs/set-leader-keys "o f y" 'misc/show-and-copy-relative-buffer-filename)
 
-(misc/set-project-shortcut "n" "~/Dropbox/Apps/org-notes/")
-(misc/set-project-shortcut "i" "~/code/NoRedInk/")
-(misc/set-project-shortcut "s" "~/.spacemacs.d/")
+(spacemacs/set-leader-keys "o l L" 'spacemacs/helm-persp-switch-project)
+(misc/set-project-shortcut "n" "orgnotes"     "~/Dropbox/Apps/org-notes/")
+(misc/set-project-shortcut "i" "nri"          "~/code/NoRedInk/")
+(misc/set-project-shortcut "s" "spacemacs-d"  "~/.spacemacs.d/")
 
 ;; CMD+S saves file and exits insert mode
 (define-key evil-insert-state-map (kbd "s-s") (lambda () (interactive)

@@ -64,8 +64,13 @@ default in the spacemacs-ui-visual layer, but seems this fixes some quirks."
       (persp-switch project)
       (projectile-switch-project-by-name project))))
 
-(defun misc/set-project-shortcut (key project)
-  (lexical-let ((project project))
-    (spacemacs/set-leader-keys (concat "o l " key)
-      (lambda () (interactive)
-        (misc/open-or-create-perspective project)))))
+(defun misc/set-project-shortcut (key shortname project)
+  (lexical-let
+      ((project project)
+       (switch-fn (intern (concat "persp-switch-" shortname))))
+    (progn
+      (defalias
+        switch-fn
+        (lambda () (interactive) (misc/open-or-create-perspective project))
+        (concat "Creates a layout for " project ", or switches to the currently open layout for the project"))
+      (spacemacs/set-leader-keys (concat "o l " key) switch-fn))))

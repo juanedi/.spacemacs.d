@@ -19,6 +19,7 @@
     projectile
     (ansi-colors :location built-in)
     flycheck-popup-tip
+    jq-mode
     )
 )
 
@@ -87,4 +88,6 @@
     :init
     (with-eval-after-load 'flycheck
       (add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode))))
+
+(defun misc/init-jq-mode ())
 ;;; packages.el ends here

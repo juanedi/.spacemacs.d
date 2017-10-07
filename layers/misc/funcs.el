@@ -74,3 +74,11 @@ default in the spacemacs-ui-visual layer, but seems this fixes some quirks."
         (lambda () (interactive) (misc/open-or-create-perspective project))
         (concat "Creates a layout for " project ", or switches to the currently open layout for the project"))
       (spacemacs/set-leader-keys (concat "o l " key) switch-fn))))
+
+(defun misc/jq-interactively-other-buffer ()
+  (interactive)
+  (let ((tmp-buffer-name (concat "jq-interactively: " (buffer-name))))
+    (get-buffer-create tmp-buffer-name)
+    (copy-to-buffer tmp-buffer-name (point-min) (point-max))
+    (switch-to-buffer-other-window tmp-buffer-name)
+    (call-interactively 'jq-interactively)))

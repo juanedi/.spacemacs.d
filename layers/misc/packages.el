@@ -70,16 +70,13 @@
    ))
 
 (defun misc/post-init-projectile ()
-  ;; on project switch change neotree root and display an empty buffer
-  ;; for some reason, without selecting window-1 the file chosen in
-  ;; projectile appears in a new split window
   (setq projectile-switch-project-action
         (lambda ()
+          (require 'magit)
           (spacemacs/new-empty-buffer)
-          (neotree-projectile-action)
-          (winum-select-window-1)
-          (projectile-find-file)
-          )))
+          (when (magit-toplevel)
+            (magit-status))
+          (projectile-find-file))))
 
 (defun misc/post-init-ansi-colors ()
   (add-hook 'compilation-filter-hook 'misc//colorize-compilation-buffer))

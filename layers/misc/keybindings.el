@@ -42,10 +42,14 @@
 ;; (spacemacs/set-leader-keys "o e p" 'eval-print-last-sexp)
 (spacemacs/set-leader-keys "o f y" 'misc/show-and-copy-relative-buffer-filename)
 
+;; PREFIX: o l
+;; switching to persp layouts
+;; use misc/set-project-shortcut to define keybindings to switch to most used projects.
+;;
+;; Example: the following code bind "SPC o l c" to ~/code/cool-project
+;;
+;;   (misc/set-project-shortcut "p" "cool-project" "~/Dropbox/Apps/cool-project/")
 (spacemacs/set-leader-keys "o l L" 'spacemacs/helm-persp-switch-project)
-(misc/set-project-shortcut "n" "orgnotes"     "~/Dropbox/Apps/org-notes/")
-(misc/set-project-shortcut "i" "nri"          "~/code/NoRedInk/")
-(misc/set-project-shortcut "s" "spacemacs-d"  "~/.spacemacs.d/")
 
 ;; CMD+S saves file and exits insert mode
 (define-key evil-insert-state-map (kbd "s-s") (lambda () (interactive)

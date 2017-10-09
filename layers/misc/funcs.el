@@ -82,3 +82,9 @@ default in the spacemacs-ui-visual layer, but seems this fixes some quirks."
     (copy-to-buffer tmp-buffer-name (point-min) (point-max))
     (switch-to-buffer-other-window tmp-buffer-name)
     (call-interactively 'jq-interactively)))
+
+(defun misc/customize-popwin-display-config ()
+  ;; this overrides configuratio made by other spacemacs layers, so needs to be
+  ;; called at the end of the initialization process
+  (push '("^\\*Flycheck.+\\*$"    :regexp t :dedicated t :position right :stick t :noselect nil :width 0.5) popwin:special-display-config)
+  (push '("^\\*.+compilation\\*$" :regexp t :dedicated t :position right :stick t :noselect t :width 0.5) popwin:special-display-config))

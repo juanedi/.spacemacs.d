@@ -391,6 +391,8 @@ you should place your code here."
   (add-hook 'prog-mode-hook 'centered-cursor-mode)
   (add-hook 'text-mode-hook 'centered-cursor-mode)
 
+  (misc/customize-popwin-display-config)
+
   ;; load customized settings
   (when (file-exists-p custom-file)
     (load-file custom-file))

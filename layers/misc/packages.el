@@ -75,9 +75,9 @@
         (lambda ()
           (require 'magit)
           (spacemacs/new-empty-buffer)
-          (when (magit-toplevel)
-            (magit-status))
-          (projectile-find-file))))
+          (if (magit-toplevel)
+              (magit-status)
+            (projectile-find-file)))))
 
 (defun misc/post-init-ansi-colors ()
   (add-hook 'compilation-filter-hook 'misc//colorize-compilation-buffer))

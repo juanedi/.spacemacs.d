@@ -388,6 +388,7 @@ you should place your code here."
 
   ;; enable centered-cursor for text and programming buffers
   ;; leaves out interactive interpreters, documentation, etc.
+  (add-hook 'neotree-mode-hook 'centered-cursor-mode)
   (add-hook 'prog-mode-hook 'centered-cursor-mode)
   (add-hook 'text-mode-hook 'centered-cursor-mode)
 
@@ -399,5 +400,4 @@ you should place your code here."
 
   ;; arbitrary stuff
   (when (file-exists-p local-config-file)
-    (load-file local-config-file))
-  )
+    (load-file local-config-file)))

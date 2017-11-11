@@ -42,6 +42,7 @@
 ;; (spacemacs/set-leader-keys "o e p" 'eval-print-last-sexp)
 (spacemacs/set-leader-keys "o f y" 'misc/show-and-copy-relative-buffer-filename)
 (spacemacs/set-leader-keys "j F" 'find-function-at-point)
+(spacemacs/set-leader-keys "o g" 'helm-google)
 (spacemacs/set-leader-keys "o b" 'misc/open-bookmark)
 
 ;; PREFIX: o l

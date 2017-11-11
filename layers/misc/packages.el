@@ -20,6 +20,7 @@
     (ansi-colors :location built-in)
     flycheck-popup-tip
     jq-mode
+    helm-google
     )
 )
 
@@ -88,6 +89,8 @@
     :init
     (with-eval-after-load 'flycheck
       (add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode))))
+
+(defun misc/init-helm-google ())
 
 (defun misc/init-jq-mode ())
 ;;; packages.el ends here

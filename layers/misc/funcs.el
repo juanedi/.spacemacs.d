@@ -88,3 +88,11 @@ default in the spacemacs-ui-visual layer, but seems this fixes some quirks."
   ;; called at the end of the initialization process
   (push '("^\\*Flycheck.+\\*$"    :regexp t :dedicated t :position right :stick t :noselect nil :width 0.5) popwin:special-display-config)
   (push '("^\\*.+compilation\\*$" :regexp t :dedicated t :position right :stick t :noselect t :width 0.5) popwin:special-display-config))
+
+(defun misc/open-bookmark ()
+  (interactive)
+  (let*
+      ((bookmark-names (sort (seq-map 'car misc/bookmarks-alist) 'string<))
+       (selection (completing-read "Bookmarks:" bookmark-names nil t))
+       (url (when selection (cdr (assoc selection misc/bookmarks-alist)))))
+    (when url (browse-url url))))

@@ -37,8 +37,6 @@
 (define-key evil-normal-state-map (kbd "C-L") (kbd "$"))
 
 
-;; Misc
-(spacemacs/set-leader-keys "o e f" 'misc//flycheck-first-error)
 ;; (spacemacs/set-leader-keys "o e p" 'eval-print-last-sexp)
 (spacemacs/set-leader-keys "o f y" 'misc/show-and-copy-relative-buffer-filename)
 (spacemacs/set-leader-keys "j F" 'find-function-at-point)
@@ -54,6 +52,10 @@
 ;;   (misc/set-project-shortcut "p" "cool-project" "~/Dropbox/Apps/cool-project/")
 (spacemacs/declare-prefix "o l" "persp-switch")
 (spacemacs/set-leader-keys "o l l" 'spacemacs/helm-persp-switch-project)
+
+(spacemacs/declare-prefix "o c" "compilation")
+(spacemacs/set-leader-keys "o c e" 'misc//flycheck-first-error)
+(spacemacs/set-leader-keys "o c c" 'flycheck-buffer)
 
 ;; CMD+S saves file and exits insert mode
 (define-key evil-insert-state-map (kbd "s-s") (lambda () (interactive)

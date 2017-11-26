@@ -16,3 +16,15 @@
       (widen)
       (number-to-string (line-number-at-pos))))
    "--colour --require spec_helper --format doc"))
+
+(defun jedi/elm-import ()
+  (interactive)
+  (let ((statement (read-string "Import statement: " "import ")))
+    (save-excursion
+      (goto-char (point-min))
+      (if (re-search-forward "^import " nil t)
+          (beginning-of-line)
+        (forward-line 1)
+        (insert "\n"))
+      (insert (concat statement "\n")))
+    (elm-sort-imports)))

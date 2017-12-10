@@ -67,6 +67,7 @@ values."
                                       (mapserver-mode :location (recipe :fetcher github :repo "juanedi/emacs-mapserver-mode"))
                                       atom-one-dark-theme
                                       all-the-icons
+                                      doom-themes
                                       )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -145,10 +146,10 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         sanityinc-tomorrow-bright
                          sanityinc-tomorrow-night
                          sanityinc-tomorrow-day
-                         spacegray
+                         doom-vibrant
+                         ;; spacegray
                          )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
@@ -370,6 +371,9 @@ you should place your code here."
    ;; display git gutter on left fringe
    git-gutter-fr+-side 'left-fringe
   )
+
+  ;; needs to be loaded here to make sure some packages are already loaded
+  (spacemacs/load-theme 'doom-vibrant)
 
   ;; enable company for all file types
   (global-company-mode)

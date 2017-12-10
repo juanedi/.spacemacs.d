@@ -78,6 +78,7 @@ values."
                                     niflheim-theme
                                     pastels-on-dark-theme
                                     tronesque-theme
+                                    zonokai-theme
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.

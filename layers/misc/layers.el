@@ -21,6 +21,6 @@
 
    (git
     :variables
-    git-magit-status-fullscreen t
+    git-magit-status-fullscreen nil
     )
    ))

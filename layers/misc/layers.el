@@ -4,7 +4,10 @@
     :variables
     auto-completion-enable-help-tooltip t
     auto-completion-tab-key-behavior 'cycle
-    auto-completion-enable-snippets-in-popup t)
+    auto-completion-enable-snippets-in-popup t
+    :disabled-for
+    elm
+    )
 
    (syntax-checking
     :variables

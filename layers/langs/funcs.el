@@ -17,9 +17,10 @@
       (number-to-string (line-number-at-pos))))
    "--colour --require spec_helper --format doc"))
 
-(defun jedi/elm-import ()
+(defun jedi/elm-import (&optional input)
+  "Prompts for an import statement to add to the current file"
   (interactive)
-  (let ((statement (read-string "Import statement: " "import ")))
+  (let ((statement (read-string "Import statement: " (concat "import " input))))
     (save-excursion
       (goto-char (point-min))
       (if (re-search-forward "^import " nil t)
@@ -28,3 +29,15 @@
         (insert "\n"))
       (insert (concat statement "\n")))
     (elm-sort-imports)))
+
+(defun jedi/elm-import-from-file ()
+  "Selects an elm file interactively and adds an import for the corresponding module"
+  (interactive)
+  (let*
+      ((all-files (projectile-current-project-files))
+       (elm-files (seq-filter (lambda (f) (s-ends-with-p ".elm" f)) all-files))
+       (file-name (projectile-completing-read "Module to import: " elm-files))
+       (full-file-name (expand-file-name file-name (projectile-project-root)))
+       (file-buffer (find-file-noselect full-file-name))
+       (module-name (with-current-buffer file-buffer (elm--get-module-name))))
+    (jedi/elm-import module-name)))

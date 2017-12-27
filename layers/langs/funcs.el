@@ -5,18 +5,6 @@
   (rspec-run-single-file (rspec-spec-file-for (buffer-file-name))
                          "--colour --require spec_helper --format doc"))
 
-(defun jedi/rspec-verify-single-fdoc ()
-  "Run the specified example at point using DOC formatter."
-  (interactive)
-  (rspec--autosave-buffer-maybe)
-  (rspec-run-single-file
-   (cons
-    (rspec-spec-file-for (buffer-file-name))
-    (save-restriction
-      (widen)
-      (number-to-string (line-number-at-pos))))
-   "--colour --require spec_helper --format doc"))
-
 (defun jedi/elm-import (&optional input)
   "Prompts for an import statement to add to the current file"
   (interactive)

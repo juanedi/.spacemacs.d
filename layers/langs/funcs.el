@@ -24,8 +24,10 @@
   (let*
       ((all-files (projectile-current-project-files))
        (elm-files (seq-filter (lambda (f) (s-ends-with-p ".elm" f)) all-files))
-       (file-name (projectile-completing-read "Module to import: " elm-files))
-       (full-file-name (expand-file-name file-name (projectile-project-root)))
-       (file-buffer (find-file-noselect full-file-name))
-       (module-name (with-current-buffer file-buffer (elm--get-module-name))))
-    (jedi/elm-import module-name)))
+       (file-name (projectile-completing-read "Module to import: " elm-files)))
+    (when file-name
+      (let*
+          ((full-file-name (expand-file-name file-name (projectile-project-root)))
+           (module-name (with-current-buffer (find-file-noselect full-file-name)
+                          (elm--get-module-name))))
+        (jedi/elm-import module-name)))))

@@ -77,7 +77,9 @@
           (require 'magit)
           (spacemacs/new-empty-buffer)
           (if (magit-toplevel)
-              (magit-status)
+              (progn
+                (magit-status)
+                (delete-other-windows))
             (projectile-find-file)))))
 
 (defun misc/post-init-ansi-colors ()

@@ -31,3 +31,8 @@
            (module-name (with-current-buffer (find-file-noselect full-file-name)
                           (elm--get-module-name))))
         (jedi/elm-import module-name)))))
+
+(defun jedi/elm-show-and-copy-module-name ()
+  "Show and copy the current module's name in the minibuffer."
+  (interactive)
+  (message (kill-new (elm--get-module-name))))

@@ -65,3 +65,5 @@
                                                 (progn
                                                   (evil-escape)
                                                   (save-buffer))))
+
+(global-set-key (kbd "C-SPC") 'helm-projectile-switch-to-buffer)

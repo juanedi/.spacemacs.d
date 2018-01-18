@@ -16,4 +16,7 @@
          (popup-tip-face :background "#424242")
          (fringe :background "#000000")
          )
+        (doom-vibrant
+         (fringe :background nil)
+         )
         ))

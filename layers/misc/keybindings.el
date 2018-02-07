@@ -25,7 +25,7 @@
 (evil-set-register ?l [?y ?s ?i ?o ?\) ?i ?l ?e ?t ?j ?k ?l ?a ?: escape ?f ?= ?l ?v ?$ ?h ?s ?\} ?h ?x ?\C-l ?$ ?i ?  escape ?\C-h ?^])
 
 
-;; Window mandagement
+;; Window management
 (evil-ex-define-cmd "vsp" 'split-window-right-and-focus)
 (spacemacs/set-leader-keys "w v" 'split-window-right-and-focus)
 (spacemacs/set-leader-keys "w V" 'split-window-right)
@@ -34,6 +34,8 @@
 (spacemacs/set-leader-keys "w s" 'split-window-below-and-focus)
 (spacemacs/set-leader-keys "w S" 'split-window-below)
 
+
+(spacemacs/set-leader-keys "b S" 'misc/switch-to-text-scratch-buffer)
 
 ;; Navigation
 (define-key evil-normal-state-map (kbd "C-H") (kbd "^"))

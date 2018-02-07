@@ -34,6 +34,7 @@
 (spacemacs/set-leader-keys "w s" 'split-window-below-and-focus)
 (spacemacs/set-leader-keys "w S" 'split-window-below)
 
+(spacemacs/set-leader-keys "o x" 'kill-buffer-and-window)
 
 (spacemacs/set-leader-keys "b S" 'misc/switch-to-text-scratch-buffer)
 

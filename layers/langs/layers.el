@@ -11,6 +11,7 @@
    purescript
    vimscript
    csv
+   graphviz
 
    (ruby
     :variables

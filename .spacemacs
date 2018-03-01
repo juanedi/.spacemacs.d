@@ -373,9 +373,6 @@ you should place your code here."
    git-gutter-fr+-side 'left-fringe
   )
 
-  ;; needs to be loaded here to make sure some packages are already loaded
-  (spacemacs/load-theme 'doom-vibrant)
-
   ;; enable company for all file types
   (global-company-mode)
 

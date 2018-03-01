@@ -7,6 +7,7 @@
    yaml
    clojure
    elixir
+   groovy
    ;; latex
    purescript
    vimscript

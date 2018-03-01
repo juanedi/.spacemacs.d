@@ -68,6 +68,7 @@ values."
                                       atom-one-dark-theme
                                       all-the-icons
                                       doom-themes
+                                      rake
                                       )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()

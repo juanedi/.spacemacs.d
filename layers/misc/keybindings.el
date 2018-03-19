@@ -70,3 +70,6 @@
                                                   (save-buffer))))
 
 (global-set-key (kbd "C-SPC") 'helm-projectile-switch-to-buffer)
+
+;; expand snippets
+(define-key evil-insert-state-map (kbd "C-/") 'hippie-expand)

@@ -149,8 +149,8 @@ values."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
                          sanityinc-tomorrow-night
-                         sanityinc-tomorrow-day
                          doom-vibrant
+                         sanityinc-tomorrow-day
                          ;; spacegray
                          )
    ;; If non nil the cursor color matches the state color in GUI Emacs.

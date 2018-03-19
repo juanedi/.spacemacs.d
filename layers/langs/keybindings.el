@@ -3,3 +3,13 @@
 (spacemacs/set-leader-keys-for-major-mode 'elm-mode "m i" 'jedi/elm-import)
 (spacemacs/set-leader-keys-for-major-mode 'elm-mode "m f i" 'jedi/elm-import-from-file)
 (spacemacs/set-leader-keys-for-major-mode 'elm-mode "m y" 'jedi/elm-show-and-copy-module-name)
+
+(spacemacs/set-leader-keys-for-major-mode 'elm-mode "t o"
+  (lambda ()
+    (interactive)
+    (jedi/run-in-split-window 'elm-test-toggle-test-and-target)))
+
+(spacemacs/set-leader-keys-for-major-mode 'ruby-mode "t o"
+  (lambda ()
+    (interactive)
+    (jedi/run-in-split-window 'rspec-toggle-spec-and-target)))

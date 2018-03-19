@@ -36,3 +36,21 @@
   "Show and copy the current module's name in the minibuffer."
   (interactive)
   (message (kill-new (elm--get-module-name))))
+
+(defun jedi/run-in-split-window (fun)
+  (delete-other-windows)
+  (split-window-right-and-focus)
+  (call-interactively fun))
+
+(defun jedi/open-test-or-implementation-other-window ()
+  "Opens the matching test or implementation for the current buffer in a split window"
+  (interactive)
+  (let
+      ((toggle-fun
+        (cond ((eq major-mode 'elm-mode) 'elm-test-toggle-test-and-target)
+              ((eq major-mode 'ruby-mode) 'rspec-toggle-spec-and-target))))
+    (when toggle-fun
+      (delete-other-windows)
+      (split-window-right-and-focus)
+      (call-interactively toggle-fun)))
+  )

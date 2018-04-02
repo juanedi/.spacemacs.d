@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: describe ... [ ... ]
+# key: describe
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# --
+describe "$1"
+    [ $2
+    ]

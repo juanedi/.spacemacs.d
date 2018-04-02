@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: JSON schema object props
+# key: object
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# --
+{
+  "type": "object",
+  "properties": {
+    "$1": { "type": "$2" }
+  },
+  "required": []
+}

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: test ... <| \() -> ...
+# key: test
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# --
+test "$1" <|
+    \\() ->
+        Expect.equal 1 1

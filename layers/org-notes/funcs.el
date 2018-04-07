@@ -26,7 +26,8 @@
     "#+TITLE: \n"
     "\n"
     "* Story: [fill]\n"
-    "* PR:    [fill]\n"
     "\n"
-    "* TODOs:\n"
+    "* Notes\n"
+    "\n"
+    "* TODOs\n"
     "  - [ ] ")))

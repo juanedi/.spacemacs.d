@@ -64,10 +64,9 @@ default in the spacemacs-ui-visual layer, but seems this fixes some quirks."
     (call-interactively 'jq-interactively)))
 
 (defun misc/customize-popwin-display-config ()
-  ;; this overrides configuratio made by other spacemacs layers, so needs to be
-  ;; called at the end of the initialization process
-  (push '("^\\*Flycheck.+\\*$"    :regexp t :dedicated t :position right :stick t :noselect nil :width 0.5) popwin:special-display-config)
-  (push '("^\\*.+compilation\\*$" :regexp t :dedicated t :position right :stick t :noselect t :width 0.5) popwin:special-display-config))
+  ;; this overrides configuratio made by other spacemacs layers, so needs to be called at the end of the initialization process
+  (push '("^\\*.+compilation\\*$" :regexp t :dedicated t :position bottom :stick t :noselect t :height 0.4) popwin:special-display-config)
+  (push '("^\\*Flycheck.+\\*$"    :regexp t :dedicated t :position bottom :stick t :noselect nil :height 0.4) popwin:special-display-config))
 
 (defun misc/open-bookmark ()
   (interactive)

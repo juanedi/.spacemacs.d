@@ -20,6 +20,7 @@
     (ansi-colors :location built-in)
     jq-mode
     helm-google
+    flycheck
     )
 )
 
@@ -84,4 +85,14 @@
 (defun misc/init-helm-google ())
 
 (defun misc/init-jq-mode ())
+
+(defun misc/post-init-flycheck ()
+  ;; restore focus to the code window after displaying a buffer with long error messages
+  (advice-add 'flycheck-display-error-messages :around
+              (lambda (orig-fun &rest args)
+                (let ((current-window (selected-window))
+                      (result (apply orig-fun args)))
+                  (progn
+                    (select-window current-window)
+                    result)))))
 ;;; packages.el ends here

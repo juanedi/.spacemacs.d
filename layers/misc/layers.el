@@ -11,7 +11,6 @@
 
    (syntax-checking
     :variables
-    ;; use flycheck-popup-tip to display errors
     syntax-checking-enable-tooltips nil
     flycheck-highlighting-mode 'lines
     )

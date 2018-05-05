@@ -77,7 +77,17 @@
               (progn
                 (magit-status)
                 (delete-other-windows))
-            (projectile-find-file)))))
+            (projectile-find-file))))
+
+  ;; enable caching
+  (setq projectile-enable-caching t)
+
+  ;; clear cache after switching branches
+  (use-package magit
+    :defer t
+    :config
+    (advice-add 'magit-checkout :after 'misc//after-magit-branch-advice)
+    (advice-add 'magit-reset-internal :after 'misc//after-magit-branch-advice)))
 
 (defun misc/post-init-ansi-colors ()
   (add-hook 'compilation-filter-hook 'misc//colorize-compilation-buffer))

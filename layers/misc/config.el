@@ -1,2 +1,1 @@
-
 (setq misc/bookmarks-alist '())

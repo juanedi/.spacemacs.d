@@ -37,6 +37,9 @@ default in the spacemacs-ui-visual layer, but seems this fixes some quirks."
 
 (autoload 'projectile-switch-project-by-name "projectile")
 
+(defun misc//after-magit-branch-advice (&rest r)
+  (projectile-invalidate-cache nil))
+
 (defun misc/open-or-create-perspective (project)
   (if (member project (persp-names-current-frame-fast-ordered))
       (persp-switch project)

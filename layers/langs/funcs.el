@@ -32,6 +32,20 @@
                           (elm--get-module-name))))
         (jedi/elm-import module-name)))))
 
+(defun jedi/elm-find-imports-of-current-module ()
+  "Searches for imports of the current module in the project"
+  (interactive)
+  (let ((module-name (regexp-quote (elm--get-module-name)))
+        (default-directory (elm-test--project-root))
+        (compilation-environment '("TERM=ansi")))
+    (find-grep
+     (concat
+      "git grep"
+      " --no-color -nH"
+      " -e 'import " module-name "$'"
+      " -e 'import " module-name " exposing'"
+     ))))
+
 (defun jedi/elm-show-and-copy-module-name ()
   "Show and copy the current module's name in the minibuffer."
   (interactive)

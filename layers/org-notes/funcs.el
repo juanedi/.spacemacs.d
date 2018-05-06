@@ -31,3 +31,9 @@
     "\n"
     "* TODOs\n"
     "  - [ ] ")))
+
+(defun org-notes/go-to-default-notes-file (&optional arg)
+  (interactive "P")
+  (if arg
+      (find-file-other-window org-default-notes-file)
+    (find-file org-default-notes-file)))

@@ -366,9 +366,6 @@ you should place your code here."
    ;; remove wave separator (color don't look good)
    powerline-default-separator 'bar
 
-   ;; escape with JK
-   evil-escape-key-sequence "jk"
-
    ;; follow symbolik links without asking for confirmation
    vc-follow-symlinks nil
 

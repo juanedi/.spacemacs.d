@@ -86,8 +86,8 @@
   (use-package magit
     :defer t
     :config
-    (advice-add 'magit-checkout :after 'misc//after-magit-branch-advice)
-    (advice-add 'magit-reset-internal :after 'misc//after-magit-branch-advice)))
+    (advice-add 'magit-checkout :after 'misc//invalidate-projectile-cache)
+    (advice-add 'magit-reset-internal :after 'misc//invalidate-projectile-cache)))
 
 (defun misc/post-init-ansi-colors ()
   (add-hook 'compilation-filter-hook 'misc//colorize-compilation-buffer))

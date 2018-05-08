@@ -43,7 +43,8 @@
       "git grep"
       " --no-color -nH"
       " -e 'import " module-name "$'"
-      " -e 'import " module-name " exposing'"
+      " -e 'import " module-name " '"
+      " -e 'import " module-name " '"
      ))))
 
 (defun jedi/elm-show-and-copy-module-name ()

@@ -30,8 +30,10 @@
 ;;; Code:
 
 (defconst org-notes-packages
-  '()
+  '(org)
 )
 
+(defun org-notes/post-init-org ()
+  (setq org-default-notes-file "~/Dropbox/Apps/org-notes/things.org"))
 
 ;;; packages.el ends here

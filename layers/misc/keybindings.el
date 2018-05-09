@@ -49,15 +49,14 @@
 (spacemacs/set-leader-keys "o g" 'helm-google)
 (spacemacs/set-leader-keys "o b" 'misc/open-bookmark)
 
-;; PREFIX: o l
-;; switching to persp layouts
-;; use misc/set-project-shortcut to define keybindings to switch to most used projects.
+;; PREFIX: o p
+;; switch to or open file in a project
+;; use misc/set-project-shortcut to define keybindings for frequently used projects.
 ;;
-;; Example: the following code bind "SPC o l c" to ~/code/cool-project
+;; Example: the following code adds keybindings to ~/code/cool-project
 ;;
-;;   (misc/set-project-shortcut "p" "cool-project" "~/Dropbox/Apps/cool-project/")
-(spacemacs/declare-prefix "o l" "persp-switch")
-(spacemacs/set-leader-keys "o l l" 'spacemacs/helm-persp-switch-project)
+;;   (misc/set-project-shortcut "p" "cool-project" "~/code/cool-project/")
+(spacemacs/declare-prefix "o p" "projects")
 
 (spacemacs/declare-prefix "o c" "compilation")
 (spacemacs/set-leader-keys "o c e" 'misc//flycheck-first-error)

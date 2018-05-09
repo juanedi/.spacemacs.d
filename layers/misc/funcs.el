@@ -48,15 +48,39 @@ default in the spacemacs-ui-visual layer, but seems this fixes some quirks."
       (projectile-switch-project-by-name project))))
 
 (defun misc/set-project-shortcut (key shortname project)
-  (lexical-let
+  (lexical-let*
       ((project project)
-       (switch-fn (intern (concat "persp-switch-" shortname))))
+       (prefix (concat "project-" shortname))
+       (key-prefix (concat "o p " key))
+       (file-fn (intern (concat prefix "-open-file")))
+       (home-fn (intern (concat prefix "-home"))))
     (progn
       (defalias
-        switch-fn
-        (lambda () (interactive) (misc/open-or-create-perspective project))
-        (concat "Creates a layout for " project ", or switches to the currently open layout for the project"))
-      (spacemacs/set-leader-keys (concat "o l " key) switch-fn))))
+        file-fn
+        (lambda () (interactive)
+          (let ((projectile-switch-project-action 'helm-projectile-find-file))
+            (projectile-switch-project-by-name project)))
+        (concat "Open file in " project)))
+
+      (defalias
+        home-fn
+        (lambda () (interactive)
+          (let ((projectile-switch-project-action 'misc/projectile-home))
+            (projectile-switch-project-by-name project)))
+        (concat "Switches to " project "'s home"))
+
+      (spacemacs/declare-prefix key-prefix prefix)
+      (spacemacs/set-leader-keys (concat key-prefix " f") file-fn)
+      (spacemacs/set-leader-keys (concat key-prefix " h") home-fn)))
+
+(defun misc/projectile-home ()
+  (interactive)
+  (require 'magit)
+  (if (magit-toplevel)
+      (progn
+        (magit-status)
+        (delete-other-windows))
+    (projectile-dired)))
 
 (defun misc/jq-interactively-other-buffer ()
   (interactive)

@@ -49,6 +49,8 @@
   ;; hide stuff
   (add-hook 'neotree-mode-hook (lambda () (add-to-list 'neo-hidden-regexp-list "^elm-stuff$")))
 
+  (add-hook 'projectile-before-switch-project-hook 'neotree-hide)
+
   ;; having neotree open breaks layout switching
   (add-hook 'persp-before-switch-functions (lambda (&rest _args) (neotree-hide)))
 
@@ -69,18 +71,7 @@
    ))
 
 (defun misc/post-init-projectile ()
-  (setq projectile-switch-project-action
-        (lambda ()
-          (require 'magit)
-          (spacemacs/new-empty-buffer)
-          (if (magit-toplevel)
-              (progn
-                (magit-status)
-                (delete-other-windows))
-            (projectile-find-file))))
-
-  ;; enable caching
-  (setq projectile-enable-caching t)
+  (setq projectile-switch-project-action 'misc/projectile-home)
 
   ;; clear cache after switching branches
   (use-package magit

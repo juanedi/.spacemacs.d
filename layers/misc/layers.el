@@ -25,4 +25,6 @@
     :variables
     git-magit-status-fullscreen nil
     )
+
+   ranger
    ))

@@ -80,7 +80,7 @@ default in the spacemacs-ui-visual layer, but seems this fixes some quirks."
       (progn
         (magit-status)
         (delete-other-windows))
-    (projectile-dired)))
+    (ranger (projectile-project-root))))
 
 (defun misc/jq-interactively-other-buffer ()
   (interactive)

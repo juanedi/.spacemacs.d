@@ -52,6 +52,17 @@
   (interactive)
   (message (kill-new (elm--get-module-name))))
 
+(defun jedi/elm-module-for-path ()
+  (let*
+      ((raw-components
+        (file-name-sans-extension (file-relative-name (buffer-file-name) (elm-test--project-root))))
+       (components
+        (split-string raw-components "/"))
+       (modules
+        (remove-if (lambda (c) (string-equal c (downcase c)))
+                   components)))
+    (string-join modules ".")))
+
 (defun jedi/run-in-split-window (fun)
   (delete-other-windows)
   (split-window-right-and-focus)
@@ -67,5 +78,4 @@
     (when toggle-fun
       (delete-other-windows)
       (split-window-right-and-focus)
-      (call-interactively toggle-fun)))
-  )
+      (call-interactively toggle-fun))))

@@ -21,6 +21,7 @@
     jq-mode
     helm-google
     flycheck
+    magithub
     )
 )
 
@@ -96,4 +97,15 @@
                   (progn
                     (select-window current-window)
                     result)))))
+
+(defun misc/init-magithub ()
+  (use-package magithub
+    :after magit
+    :init
+    (setq magithub-dir (concat spacemacs-cache-directory "magithub/"))
+    :config
+    (progn
+      (magithub-feature-autoinject t)
+      (define-key magit-status-mode-map "@" #'magithub-dispatch-popup))))
+
 ;;; packages.el ends here

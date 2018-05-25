@@ -13,6 +13,7 @@
    vimscript
    csv
    graphviz
+   coffeescript
 
    (ruby
     :variables

@@ -85,6 +85,8 @@ values."
                                     github-clone
                                     github-search
                                     magit-gh-pulls
+
+                                    ruby-test-mode
                                     ; use local version for development
                                     ;; elm-test-el
                                     )

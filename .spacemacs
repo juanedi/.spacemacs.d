@@ -44,7 +44,7 @@ values."
      theming-customizations
 
      elm-test ; git clone git@github.com:juanedi/elm-test-spacemacs-layer.git ~/.emacs.d/private/elm-test
-     crystal  ; git clone git@github.com:juanedi/crystal-spacemacs-layer.git ~/.emacs.d/private/crystal
+     ;; crystal  ; git clone git@github.com:juanedi/crystal-spacemacs-layer.git ~/.emacs.d/private/crystal
 
      ;; Other!
      better-defaults

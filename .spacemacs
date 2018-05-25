@@ -85,6 +85,8 @@ values."
                                     github-clone
                                     github-search
                                     magit-gh-pulls
+                                    ; use local version for development
+                                    ;; elm-test-el
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -401,6 +403,10 @@ you should place your code here."
 
   (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
   (misc//customize-flycheck-popups)
+
+  ;; use local version for development
+  ;; (load-file "~/code/elm-test-el/elm-test-el.el")
+  ;; (elm-test/init-elm-test-el)
 
   ;; display time in mode line
   (setq

@@ -402,7 +402,6 @@ you should place your code here."
   (setq mac-command-modifier 'super)
 
   (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
-  (misc//customize-flycheck-popups)
 
   ;; use local version for development
   ;; (load-file "~/code/elm-test-el/elm-test-el.el")

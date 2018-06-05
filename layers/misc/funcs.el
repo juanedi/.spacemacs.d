@@ -114,3 +114,8 @@ if prefix argument ARG is given, switch to it in an other, possibly new window."
     (when (and (not exists)
                (not (eq major-mode 'text-mode)))
       (text-mode))))
+
+(defun misc/magithub-browse-current-pr ()
+  (interactive)
+  (when magithub-issue
+    (browse-url (alist-get 'html_url magithub-issue))))

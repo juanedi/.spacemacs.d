@@ -52,7 +52,7 @@
   (interactive)
   (message (kill-new (elm--get-module-name))))
 
-(defun jedi/elm-module-for-path ()
+(defun jedi/elm-current-module-name ()
   (let*
       ((raw-components
         (file-name-sans-extension (file-relative-name (buffer-file-name) (elm-test--project-root))))
@@ -62,6 +62,25 @@
         (remove-if (lambda (c) (string-equal c (downcase c)))
                    components)))
     (string-join modules ".")))
+
+(defun jedi/ruby-current-module-name ()
+  (let*
+      ((raw-components (jedi//ruby-relative-file-name-sans-extension (buffer-file-name)))
+       (components
+        (seq-map 's-upper-camel-case (split-string raw-components "/"))))
+    (string-join components "::")))
+
+(defun jedi//ruby-relative-file-name-sans-extension (file-name)
+  "Return a resource name extracted from the name of the currently visiting file."
+  (let* ((ruby-module-regex
+          `("/spec/\\(.+\\)_spec.rb\\'"
+            "/spec/lib/\\(.+\\)_spec.rb\\'"))
+         (name (and file-name
+                    (loop for re in ruby-module-regex
+                          do (if (string-match re file-name)
+                                 (return (match-string 1 file-name)))))))
+    (and name
+         (singularize-string name))))
 
 (defun jedi/run-in-split-window (fun)
   (delete-other-windows)

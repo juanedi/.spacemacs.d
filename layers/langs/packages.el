@@ -12,6 +12,15 @@
 ;;; Code:
 
 (defconst langs-packages
-  '()
+  '(rspec-mode)
 )
+
+(defun langs/post-init-rspec-mode ()
+  (advice-add
+   'rspec-toggle-spec-and-target
+   :after
+   (lambda ()
+     (if (string-empty-p (buffer-string))
+         (progn
+           (yas-expand-snippet (yas-lookup-snippet 'spec)))))))
 ;;; packages.el ends here

@@ -3,7 +3,7 @@
 # key: module
 # expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
 # --
-module ${1:`(jedi/elm-current-module-name)`} exposing (${2:..})
+module ${`(jedi/elm-current-module-name)`} exposing (${1:..})
 
 
-$3
+$2

@@ -5,7 +5,7 @@
 # --
 require "rails_helper"
 
-describe ${`(jedi/ruby-current-module-name)`} do
+describe ${`(langs/ruby-current-module-name)`} do
   it "does something" do
     expect(true).to be_truthy$1
   end

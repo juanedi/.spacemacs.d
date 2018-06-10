@@ -65,12 +65,12 @@
 
 (defun jedi/ruby-current-module-name ()
   (let*
-      ((raw-components (jedi//ruby-relative-file-name-sans-extension (buffer-file-name)))
+      ((raw-components (jedi//ruby-extract-module-segments-from-file-path (buffer-file-name)))
        (components
         (seq-map 's-upper-camel-case (split-string raw-components "/"))))
     (string-join components "::")))
 
-(defun jedi//ruby-relative-file-name-sans-extension (file-name)
+(defun jedi//ruby-extract-module-segments-from-file-path (file-name)
   "Return a resource name extracted from the name of the currently visiting file."
   (let* ((ruby-module-regex
           `("/spec/\\(.+\\)_spec.rb\\'"

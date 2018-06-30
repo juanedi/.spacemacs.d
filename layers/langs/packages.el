@@ -24,14 +24,12 @@
    :after
    (lambda ()
      (if (string-empty-p (buffer-string))
-         (progn
-           (yas-expand-snippet (yas-lookup-snippet 'spec)))))))
+         (yas-expand-snippet (yas-lookup-snippet 'spec))))))
 
 (defun langs/post-init-elm-mode ()
   (add-hook
    'elm-mode-hook
    (lambda ()
      (if (string-empty-p (buffer-string))
-         (progn
-           (yas-expand-snippet (yas-lookup-snippet 'module)))))))
+         (yas-expand-snippet (yas-lookup-snippet 'module))))))
 ;;; packages.el ends here

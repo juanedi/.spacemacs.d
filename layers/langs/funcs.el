@@ -73,8 +73,9 @@
 (defun langs//ruby-extract-module-segments-from-file-path (file-name)
   "Return a resource name extracted from the name of the currently visiting file."
   (let* ((ruby-module-regex
-          `("/spec/\\(.+\\)_spec.rb\\'"
-            "/spec/lib/\\(.+\\)_spec.rb\\'"))
+          `("/spec/controllers/\\(.+\\)_spec.rb\\'"
+            "/spec/lib/\\(.+\\)_spec.rb\\'"
+            "/spec/\\(.+\\)_spec.rb\\'"))
          (name (and file-name
                     (loop for re in ruby-module-regex
                           do (if (string-match re file-name)

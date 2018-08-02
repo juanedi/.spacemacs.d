@@ -97,14 +97,6 @@ default in the spacemacs-ui-visual layer, but seems this fixes some quirks."
   (push '("^\\*prodigy\\*$"       :regexp t :dedicated t :position bottom :stick t :noselect nil :height 0.4) popwin:special-display-config)
   )
 
-(defun misc/open-bookmark ()
-  (interactive)
-  (let*
-      ((bookmark-names (sort (seq-map 'car misc/bookmarks-alist) 'string<))
-       (selection (completing-read "Bookmarks:" bookmark-names nil t))
-       (url (when selection (cdr (assoc selection misc/bookmarks-alist)))))
-    (when url (browse-url url))))
-
 (defun misc/switch-to-text-scratch-buffer (&optional arg)
   "Switch to the `*scratch-text*' buffer, creating it first if needed.
 if prefix argument ARG is given, switch to it in an other, possibly new window."

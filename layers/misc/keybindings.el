@@ -47,7 +47,6 @@
 (spacemacs/set-leader-keys "o f y" 'misc/show-and-copy-relative-buffer-filename)
 (spacemacs/set-leader-keys "j F" 'find-function-at-point)
 (spacemacs/set-leader-keys "o g" 'helm-google)
-(spacemacs/set-leader-keys "o b" 'misc/open-bookmark)
 
 ;; PREFIX: o p
 ;; switch to or open file in a project

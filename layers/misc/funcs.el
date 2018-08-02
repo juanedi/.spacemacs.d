@@ -93,7 +93,9 @@ default in the spacemacs-ui-visual layer, but seems this fixes some quirks."
 (defun misc/customize-popwin-display-config ()
   ;; this overrides configuratio made by other spacemacs layers, so needs to be called at the end of the initialization process
   (push '("^\\*.+compilation\\*$" :regexp t :dedicated t :position bottom :stick t :noselect t :height 0.4) popwin:special-display-config)
-  (push '("^\\*Flycheck.+\\*$"    :regexp t :dedicated t :position bottom :stick t :noselect nil :height 0.4) popwin:special-display-config))
+  (push '("^\\*Flycheck.+\\*$"    :regexp t :dedicated t :position bottom :stick t :noselect nil :height 0.4) popwin:special-display-config)
+  (push '("^\\*prodigy\\*$"       :regexp t :dedicated t :position bottom :stick t :noselect nil :height 0.4) popwin:special-display-config)
+  )
 
 (defun misc/open-bookmark ()
   (interactive)

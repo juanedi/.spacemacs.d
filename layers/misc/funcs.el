@@ -95,6 +95,7 @@ default in the spacemacs-ui-visual layer, but seems this fixes some quirks."
   (push '("^\\*.+compilation\\*$" :regexp t :dedicated t :position bottom :stick t :noselect t :height 0.4) popwin:special-display-config)
   (push '("^\\*Flycheck.+\\*$"    :regexp t :dedicated t :position bottom :stick t :noselect nil :height 0.4) popwin:special-display-config)
   (push '("^\\*prodigy\\*$"       :regexp t :dedicated t :position bottom :stick t :noselect nil :height 0.4) popwin:special-display-config)
+  (push '("^\\*Async Shell Command\\*$" :regexp t :dedicated t :position bottom :stick t :noselect nil :height 0.4) popwin:special-display-config)
   )
 
 (defun misc/switch-to-text-scratch-buffer (&optional arg)

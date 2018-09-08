@@ -8,7 +8,7 @@
 (spacemacs/set-leader-keys-for-major-mode 'elm-mode "t o"
   (lambda ()
     (interactive)
-    (langs/run-in-split-window 'elm-test-toggle-test-and-target)))
+    (langs/run-in-split-window 'elm-test-runner-toggle-test-and-target)))
 
 (spacemacs/set-leader-keys-for-major-mode 'ruby-mode "t o"
   (lambda ()

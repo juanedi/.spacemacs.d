@@ -36,7 +36,7 @@
   "Searches for imports of the current module in the project"
   (interactive)
   (let ((module-name (regexp-quote (elm--get-module-name)))
-        (default-directory (elm-test--project-root))
+        (default-directory (elm-test-runner--project-root))
         (compilation-environment '("TERM=ansi")))
     (find-grep
      (concat
@@ -55,7 +55,7 @@
 (defun langs/elm-current-module-name ()
   (let*
       ((raw-components
-        (file-name-sans-extension (file-relative-name (buffer-file-name) (elm-test--project-root))))
+        (file-name-sans-extension (file-relative-name (buffer-file-name) (elm-test-runner--project-root))))
        (components
         (split-string raw-components "/"))
        (modules
@@ -93,7 +93,7 @@
   (interactive)
   (let
       ((toggle-fun
-        (cond ((eq major-mode 'elm-mode) 'elm-test-toggle-test-and-target)
+        (cond ((eq major-mode 'elm-mode) 'elm-test-runner-toggle-test-and-target)
               ((eq major-mode 'ruby-mode) 'rspec-toggle-spec-and-target))))
     (when toggle-fun
       (delete-other-windows)

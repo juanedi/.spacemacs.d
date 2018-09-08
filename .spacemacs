@@ -47,8 +47,6 @@ This function should only modify configuration layer settings."
      org-notes
      theming-customizations
 
-     elm-test ; git clone git@github.com:juanedi/elm-test-spacemacs-layer.git ~/.emacs.d/private/elm-test
-
      ;; ------ built-in spacemacs layers
      emacs-lisp
      git

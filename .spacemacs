@@ -532,7 +532,6 @@ before packages are loaded."
 
   (global-company-mode)
   (setq mac-command-modifier 'super)
-  (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
 
   (setq
    display-time-24hr-format t

@@ -224,7 +224,7 @@ It should only modify the values of Spacemacs settings."
    ;; to create your own spaceline theme. Value can be a symbol or list with\
    ;; additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   dotspacemacs-mode-line-theme '(spacemacs :separator bar :separator-scale 1.5)
+   dotspacemacs-mode-line-theme '(all-the-icons :separator nil)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
@@ -507,9 +507,6 @@ before packages are loaded."
   (setq-default
    evil-normal-state-cursor 'hbar
 
-   ;; remove wave separator (color don't look good)
-   powerline-default-separator 'bar
-
    ;; follow symbolik links without asking for confirmation
    vc-follow-symlinks nil
 
@@ -555,6 +552,14 @@ before packages are loaded."
   ;; use local version for development
   ;; (load-file "~/code/elm-test-el/elm-test-el.el")
   ;; (elm-test/init-elm-test-el)
+
+  (setq
+   spaceline-all-the-icons-separator-type 'none
+   powerline-text-scale-factor 1.2
+   powerline-default-separator 'bar
+   )
+  (spaceline-toggle-all-the-icons-eyebrowse-workspace-off)
+  (spaceline-toggle-all-the-icons-git-status-off)
 
   ;; load customized settings
   (when (file-exists-p custom-file)

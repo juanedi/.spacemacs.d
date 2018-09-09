@@ -22,6 +22,7 @@
     helm-google
     flycheck
     magithub
+    direnv
     )
 )
 
@@ -107,5 +108,10 @@
     (progn
       (magithub-feature-autoinject t)
       (define-key magit-status-mode-map "@" #'magithub-dispatch-popup))))
+
+(defun misc/init-direnv ()
+  (use-package direnv
+    :config
+    (direnv-mode)))
 
 ;;; packages.el ends here

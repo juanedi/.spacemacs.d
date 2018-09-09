@@ -4,6 +4,8 @@
    (haskell
     :variables
     haskell-completion-backend 'intero
+    haskell-enable-hindent nil
+    hindent-reformat-buffer-on-save nil
     )
    erlang
    python

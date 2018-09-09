@@ -1,7 +1,10 @@
 (configuration-layer/declare-layers
  '(
    react
-   haskell
+   (haskell
+    :variables
+    haskell-completion-backend 'intero
+    )
    erlang
    python
    yaml

@@ -97,7 +97,11 @@
                       (result (apply orig-fun args)))
                   (progn
                     (select-window current-window)
-                    result)))))
+                    result))))
+
+  ;; fix race condition in which sometimes the direnv hook is run after flycheck
+  ;; detects available chekers.
+  (add-hook 'flycheck-before-syntax-check-hook 'direnv--maybe-update-environment))
 
 (defun misc/init-magithub ()
   (use-package magithub

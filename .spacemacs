@@ -90,7 +90,7 @@ This function should only modify configuration layer settings."
      vi-tilde-fringe
 
      ; use local version for development
-     ;; elm-test-el
+     ;; elm-test-runner
      )
 
    ;; Defines the behaviour of Spacemacs when installing packages.
@@ -550,8 +550,8 @@ before packages are loaded."
   (misc/customize-popwin-display-config)
 
   ;; use local version for development
-  ;; (load-file "~/code/elm-test-el/elm-test-el.el")
-  ;; (elm-test/init-elm-test-el)
+  ;; (load-file "~/code/elm-test-runner/elm-test-runner.el")
+  ;; (elm/init-elm-test-runner)
 
   (setq
    spaceline-all-the-icons-separator-type 'none

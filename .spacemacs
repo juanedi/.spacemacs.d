@@ -74,6 +74,7 @@ This function should only modify configuration layer settings."
      all-the-icons
      doom-themes
      rake
+     flycheck-package
      )
 
    ;; A list of packages that cannot be updated.

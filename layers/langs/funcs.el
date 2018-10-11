@@ -136,12 +136,43 @@
           (delete-file err-file))
       (message "Could not find brittany on the path"))))
 
+(defun langs/haskell-sort-imports-on-buffer ()
+  (interactive)
+  (save-excursion
+    (goto-char 0)
+    (re-search-forward haskell-sort-imports-regexp nil t)
+    (haskell-sort-imports)))
+
+(defun langs/haskell-align-unqualified-imports ()
+  (interactive)
+  (if (langs//haskell-any-qualified-imports)
+      ;; if there is a qualified import, add extra spacing to unqualified imports
+      (save-excursion
+        (goto-char 0)
+        (while (re-search-forward "^import \\([^q ]\\)" nil t)
+          (replace-match "import           \\1" t nil)))
+      ;; otherwise, remove extra spacing
+      (save-excursion
+        (goto-char 0)
+        (while (re-search-forward "^import           " nil t)
+          (replace-match "import " t nil)))))
+
+(defun langs//haskell-any-qualified-imports ()
+  (save-excursion
+    (goto-char 0)
+    (re-search-forward "^import qualified" nil t)))
+
 (defun langs/haskell-after-save-hook ()
-  (when
-      (and langs/haskell-run-brittany-after-save
-           (equal 'haskell-mode major-mode))
-    (progn
-      (langs/haskell-run-brittany-on-buffer)
-      (let ((before-save-hook '())
-            (after-save-hook '()))
-        (basic-save-buffer)))))
+  (when (equal 'haskell-mode major-mode)
+    (when langs/haskell-run-brittany-after-save
+      (langs/haskell-run-brittany-on-buffer))
+
+    (when langs/haskell-sort-imports-after-save
+      (langs/haskell-sort-imports-on-buffer))
+
+    (when langs/haskell-align-unqualified-imports-after-save
+      (langs/haskell-align-unqualified-imports))
+
+    (let ((before-save-hook '())
+          (after-save-hook '()))
+      (basic-save-buffer))))

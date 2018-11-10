@@ -5,6 +5,19 @@
   (rspec-run-single-file (rspec-spec-file-for (buffer-file-name))
                          "--colour --require spec_helper --format doc"))
 
+(defun langs/haskell-import (&optional input)
+  "Prompts for an import statement to add to the current file"
+  (interactive)
+  (let ((statement (read-string "Import statement: " (concat "import " input))))
+    (save-excursion
+      (goto-char (point-min))
+      (if (re-search-forward "^import " nil t)
+          (beginning-of-line)
+        (forward-line 1)
+        (insert "\n"))
+      (insert (concat statement "\n")))
+    (elm-sort-imports)))
+
 (defun langs/elm-import (&optional input)
   "Prompts for an import statement to add to the current file"
   (interactive)

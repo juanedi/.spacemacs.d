@@ -5,6 +5,8 @@
 (spacemacs/set-leader-keys-for-major-mode 'elm-mode "m i /" 'langs/elm-find-imports-of-current-module)
 (spacemacs/set-leader-keys-for-major-mode 'elm-mode "m y" 'langs/elm-show-and-copy-module-name)
 
+(spacemacs/set-leader-keys-for-major-mode 'haskell-mode "m i i" 'langs/haskell-import)
+
 (spacemacs/set-leader-keys-for-major-mode 'elm-mode "t o"
   (lambda ()
     (interactive)

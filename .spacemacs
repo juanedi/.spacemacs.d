@@ -42,9 +42,10 @@ This function should only modify configuration layer settings."
 
      ;; ------ my layers
      misc
-     (timeclock-conf :variables timeclock-file "~/Dropbox/timelog")
      langs
      elm-extra
+     haskell-extra
+     (timeclock-conf :variables timeclock-file "~/Dropbox/timelog")
      org-notes
      theming-customizations
 

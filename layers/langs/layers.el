@@ -1,12 +1,6 @@
 (configuration-layer/declare-layers
  '(
    react
-   (haskell
-    :variables
-    haskell-completion-backend 'intero
-    haskell-enable-hindent nil
-    hindent-reformat-buffer-on-save nil
-    )
    erlang
    python
    yaml

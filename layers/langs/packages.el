@@ -14,7 +14,6 @@
 (defconst langs-packages
   '(
     rspec-mode
-    haskell-mode
     )
 )
 
@@ -25,7 +24,4 @@
    (lambda ()
      (if (string-empty-p (buffer-string))
          (yas-expand-snippet (yas-lookup-snippet 'spec))))))
-
-(defun langs/post-init-haskell-mode ()
-  (add-hook 'after-save-hook 'langs/haskell-after-save-hook))
 ;;; packages.el ends here

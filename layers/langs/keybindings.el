@@ -1,7 +1,5 @@
 (spacemacs/set-leader-keys-for-major-mode 'ruby-mode "t B" 'langs/rspec-verify-fdoc)
 
-(spacemacs/set-leader-keys-for-major-mode 'haskell-mode "m i i" 'langs/haskell-import)
-
 (spacemacs/set-leader-keys-for-major-mode 'ruby-mode "t o"
   (lambda ()
     (interactive)

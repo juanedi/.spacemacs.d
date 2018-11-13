@@ -28,12 +28,6 @@
     ruby-enable-enh-ruby-mode nil
     )
 
-   (elm
-    :variables
-    elm-format-on-save t
-    elm-sort-imports-on-save t
-    )
-
    (javascript
     :variables
     js-indent-level 2

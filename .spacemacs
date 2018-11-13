@@ -44,6 +44,7 @@ This function should only modify configuration layer settings."
      misc
      (timeclock-conf :variables timeclock-file "~/Dropbox/timelog")
      langs
+     elm-extra
      org-notes
      theming-customizations
 

@@ -45,6 +45,7 @@ This function should only modify configuration layer settings."
      langs
      elm-extra
      haskell-extra
+     ruby-extra
      (timeclock-conf :variables timeclock-file "~/Dropbox/timelog")
      org-notes
      theming-customizations

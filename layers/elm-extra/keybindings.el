@@ -6,4 +6,4 @@
 (spacemacs/set-leader-keys-for-major-mode 'elm-mode "t o"
   (lambda ()
     (interactive)
-    (langs/run-in-split-window 'elm-test-runner-toggle-test-and-target)))
+    (misc/run-in-split-window 'elm-test-runner-toggle-test-and-target)))

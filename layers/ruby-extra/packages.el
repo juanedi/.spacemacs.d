@@ -1,4 +1,4 @@
-;;; packages.el --- langs layer packages file for Spacemacs.
+;;; packages.el --- ruby-extra layer packages file for Spacemacs.
 ;;
 ;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
 ;;
@@ -11,13 +11,13 @@
 
 ;;; Code:
 
-(defconst langs-packages
+(defconst ruby-extra-packages
   '(
     rspec-mode
     )
-)
+  )
 
-(defun langs/post-init-rspec-mode ()
+(defun ruby-extra/post-init-rspec-mode ()
   (advice-add
    'rspec-toggle-spec-and-target
    :after

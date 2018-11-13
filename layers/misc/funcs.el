@@ -1,3 +1,8 @@
+(defun misc/run-in-split-window (fun)
+  (delete-other-windows)
+  (split-window-right-and-focus)
+  (call-interactively fun))
+
 (defun misc//projectile-toogle-between-implementation-and-test-splitting ()
   (interactive)
   (split-window-right-and-focus)

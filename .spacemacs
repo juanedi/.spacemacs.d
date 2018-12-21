@@ -491,7 +491,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
    ;; do not warn if setting variables in .zshrc instead of .zshenv
    exec-path-from-shell-check-startup-files nil
    )
-  (setq custom-file "~/.spacemacs.d/custom.el")
+  (setq custom-file (concat (getenv "HOME") "/.spacemacs.d/custom.el"))
   (setq local-config-file "~/config.local.el")
   )
 

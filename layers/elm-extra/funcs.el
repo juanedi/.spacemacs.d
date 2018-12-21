@@ -23,7 +23,7 @@
           ((full-file-name (expand-file-name file-name (projectile-project-root)))
            (module-name (with-current-buffer (find-file-noselect full-file-name)
                           (elm--get-module-name))))
-        (langs/elm-import module-name)))))
+        (elm-extra/import module-name)))))
 
 (defun elm-extra/find-imports-of-current-module ()
   "Searches for imports of the current module in the project"

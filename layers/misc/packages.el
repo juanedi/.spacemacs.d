@@ -23,6 +23,7 @@
     flycheck
     magithub
     direnv
+    flycheck-popup-tip
     )
 )
 
@@ -118,4 +119,17 @@
     :config
     (direnv-mode)))
 
+(defun misc/init-flycheck-popup-tip ()
+  (use-package flycheck-pos-tip
+    :defer t
+    :init
+    (progn
+      (with-eval-after-load 'flycheck
+        (add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode))
+
+      (with-eval-after-load 'popup
+        ;; disable underline on popups for all themes
+        ;; this prevents displaying underline flycheck errors behind the popup
+        (set-face-underline-p 'popup-tip-face nil)
+        ))))
 ;;; packages.el ends here

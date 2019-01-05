@@ -225,11 +225,9 @@ It should only modify the values of Spacemacs settings."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes
    '(
+     doom-nord-light
      doom-city-lights
      sanityinc-tomorrow-night
-     doom-opera
-     doom-nord-light
-     spacegray
      )
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',

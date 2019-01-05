@@ -558,6 +558,8 @@ before packages are loaded."
    powerline-default-separator 'bar
    )
 
+  (spaceline-toggle-minor-modes-off)
+
   ;; load customized settings
   (when (file-exists-p custom-file)
     (load-file custom-file))

@@ -23,7 +23,8 @@
 (evil-set-register ?c [?f ?, ?l ?s return escape ?l])
 ;; rpsec: turn assignment into let binding
 (evil-set-register ?l [?y ?s ?i ?o ?\) ?i ?l ?e ?t ?j ?k ?l ?a ?: escape ?f ?= ?l ?v ?$ ?h ?s ?\} ?h ?x ?\C-l ?$ ?i ?  escape ?\C-h ?^])
-
+;; parenthesize until end of line
+(evil-set-register ?p "v$hs)")
 
 ;; Window management
 (evil-ex-define-cmd "vsp" 'split-window-right-and-focus)

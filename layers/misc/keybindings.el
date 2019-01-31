@@ -68,7 +68,8 @@
                                                   (evil-escape)
                                                   (save-buffer))))
 
-(global-set-key (kbd "C-SPC") 'helm-projectile-switch-to-buffer)
+;; C-SPC: show buffer list using helm
+(global-set-key (kbd "C-SPC") 'lazy-helm/helm-mini)
 
 ;; expand snippets
 (define-key evil-insert-state-map (kbd "C-/") 'hippie-expand)

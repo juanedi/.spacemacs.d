@@ -22,8 +22,9 @@
       (let*
           ((full-file-name (expand-file-name file-name (projectile-project-root)))
            (module-name (with-current-buffer (find-file-noselect full-file-name)
-                          (elm--get-module-name))))
-        (elm-extra/import module-name)))))
+                          (elm--get-module-name)))
+           (aliased-module-name (elm-extra/aliased-module-name module-name)))
+        (elm-extra/import aliased-module-name)))))
 
 (defun elm-extra/find-imports-of-current-module ()
   "Searches for imports of the current module in the project"
@@ -55,3 +56,10 @@
         (remove-if (lambda (c) (string-equal c (downcase c)))
                    components)))
     (string-join modules ".")))
+
+(defun elm-extra/aliased-module-name (module-name)
+  (concat "import " module-name " as Foo")
+  (let ((components (s-split "\\." module-name)))
+    (if (< 1 (length components))
+        (concat module-name " as " (car (last components)))
+        (concat module-name))))

@@ -560,6 +560,9 @@ before packages are loaded."
 
   (spaceline-toggle-minor-modes-off)
 
+  ;; needed to fix passphrase entry when using easypg
+  (setq epa-pinentry-mode 'loopback)
+
   ;; load customized settings
   (when (file-exists-p custom-file)
     (load-file custom-file))

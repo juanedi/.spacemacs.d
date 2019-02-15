@@ -63,3 +63,27 @@
     (if (< 1 (length components))
         (concat module-name " as " (car (last components)))
         (concat module-name))))
+
+(defun elm-extra/template-for-module (test-module-name target-module-name)
+  "The template we'll use when creating TEST-MODULE-NAME, the test suite for TARGET-MODULE-NAME."
+  (let ((entry-point (elm-test-runner--suite-entry-point))
+        (sorted-imports
+         (sort (list
+                "import Expect\n"
+                "import Test exposing (..)\n"
+                (concat "import " (elm-extra/aliased-module-name target-module-name) "\n")
+                )
+               'string<)))
+    (concat
+     "module " test-module-name " exposing (" entry-point ")\n"
+     "\n"
+     (apply 'concat sorted-imports)
+     "\n"
+     "\n"
+     entry-point " : Test\n"
+     entry-point " =\n"
+     "    describe \"something\"\n"
+     "        [ test \"it works\" <|\n"
+     "            \\() ->\n"
+     "                Expect.equal 1 1\n"
+     "        ]\n")))

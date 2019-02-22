@@ -58,7 +58,6 @@
     (string-join modules ".")))
 
 (defun elm-extra/aliased-module-name (module-name)
-  (concat "import " module-name " as Foo")
   (let ((components (s-split "\\." module-name)))
     (if (< 1 (length components))
         (concat module-name " as " (car (last components)))

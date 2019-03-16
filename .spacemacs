@@ -85,6 +85,7 @@ This function should only modify configuration layer settings."
      doom-themes
      rake
      flycheck-package
+     kaolin-themes
      )
 
    ;; A list of packages that cannot be updated.
@@ -226,8 +227,9 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-themes
    '(
      doom-city-lights
-     doom-nord-light
+     kaolin-light
      sanityinc-tomorrow-night
+     doom-nord-light
      )
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
@@ -485,6 +487,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;;  ;; do not warn if setting variables in .zshrc instead of .zshenv
   ;;  exec-path-from-shell-check-startup-files nil
   ;;  )
+  (add-to-list 'load-path "~/.spacemacs.d/packages/")
   (setq custom-file (concat (getenv "HOME") "/.spacemacs.d/custom.el"))
   (setq local-config-file "~/config.local.el")
   )
@@ -559,6 +562,8 @@ before packages are loaded."
    )
 
   (spaceline-toggle-minor-modes-off)
+
+  (require 'ayu-theme)
 
   ;; needed to fix passphrase entry when using easypg
   (setq epa-pinentry-mode 'loopback)

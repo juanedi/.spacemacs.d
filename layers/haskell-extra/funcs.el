@@ -17,7 +17,6 @@
   (let* ((in-file (make-temp-file "brittany" nil ".hs"))
          (err-file (make-temp-file "brittany"))
          (contents (buffer-substring-no-properties (point-min) (point-max)))
-         (scratch-text (get-buffer "*scratch-text*"))
          (_ (with-temp-file in-file (insert contents))))
 
     (if-let (command (executable-find "brittany"))

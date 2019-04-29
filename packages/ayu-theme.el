@@ -131,6 +131,9 @@
  '(company-tooltip                     ((t (:inherit (company-tooltip-search-selection)))))
  '(company-scrollbar-bg                ((t (:inherit (company-tooltip)))))
 
+ ;; Auto highlight symbol
+ '(ahs-plugin-whole-buffer-face        ((t (:inherit (spacemacs-visual-face)))))
+
  ;; Org headers
  '(outline-1                   ((t (:background nil))))
 ) ;; End face definitions

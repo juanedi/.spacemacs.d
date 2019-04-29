@@ -24,6 +24,7 @@
     magithub
     direnv
     flycheck-popup-tip
+    auto-highlight-symbol
     )
 )
 
@@ -132,4 +133,7 @@
         ;; this prevents displaying underline flycheck errors behind the popup
         (set-face-underline-p 'popup-tip-face nil)
         ))))
+
+(defun misc/post-init-auto-highlight-symbol ()
+  (spacemacs/toggle-automatic-symbol-highlight-on))
 ;;; packages.el ends here

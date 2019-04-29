@@ -37,3 +37,9 @@
   (if arg
       (find-file-other-window org-default-notes-file)
     (find-file org-default-notes-file)))
+
+(defun org-notes/open-agenda (fill)
+  (interactive "P")
+  (org-agenda nil "c")
+  (when fill
+    (delete-other-windows)))

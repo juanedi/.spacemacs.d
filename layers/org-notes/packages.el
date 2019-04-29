@@ -34,6 +34,9 @@
 )
 
 (defun org-notes/post-init-org ()
-  (setq org-default-notes-file "~/Dropbox/Apps/org-notes/things.org"))
+  (setq
+   ;; for some reason this setting is overwritten if I put this in config.el
+   org-default-notes-file "~/Dropbox/Apps/org-notes/things.org"
+   org-agenda-files (list "~/Dropbox/Apps/org-notes/things.org")))
 
 ;;; packages.el ends here

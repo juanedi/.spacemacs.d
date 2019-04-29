@@ -74,5 +74,3 @@
 ;; expand snippets
 (define-key evil-insert-state-map (kbd "C-/") 'hippie-expand)
 (define-key evil-insert-state-map (kbd "M-/") 'spacemacs/helm-yas)
-
-(evil-define-key 'insert org-mode-map (kbd "M-RET") 'org-insert-item)

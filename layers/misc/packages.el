@@ -135,5 +135,6 @@
         ))))
 
 (defun misc/post-init-auto-highlight-symbol ()
-  (spacemacs/toggle-automatic-symbol-highlight-on))
+  ;; (spacemacs/toggle-automatic-symbol-highlight-on)
+  )
 ;;; packages.el ends here

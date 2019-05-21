@@ -37,6 +37,6 @@
   (setq
    ;; for some reason this setting is overwritten if I put this in config.el
    org-default-notes-file "~/Dropbox/Apps/org-notes/things.org"
-   org-agenda-files (list "~/Dropbox/Apps/org-notes/things.org")))
+   org-agenda-files (list "~/Dropbox/Apps/org-notes/agenda.org")))
 
 ;;; packages.el ends here

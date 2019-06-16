@@ -18,6 +18,12 @@
     "#+TITLE: \n"
     "\n")))
 
+(defun org-notes//capture-todo ()
+  (interactive)
+  (let ((split-width-threshold nil))
+    (org-capture nil "t")
+    (evil-insert-state)))
+
 (defun org-notes/new-pivotal-note ()
   "Read a filename and create an org mode note with a template for tracking PT stories context."
   (interactive)

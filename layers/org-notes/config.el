@@ -4,7 +4,7 @@
   '((sequence "TODO" "IN-PROGRESS" "|" "DONE"))
  org-capture-templates
  '(("t" "TODO entry" entry (file+headline  "~/Dropbox/Apps/org-notes/agenda.org" "Tasks")
-     "** TODO %i %?\n   SCHEDULED: %t\n\n"))
+     "** TODO%i %?\n   SCHEDULED: %t\n\n"))
  org-agenda-custom-commands
   '(("c" "Agenda and unschedueld TODOs"
      ((agenda "")

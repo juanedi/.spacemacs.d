@@ -86,6 +86,8 @@ This function should only modify configuration layer settings."
      rake
      flycheck-package
      kaolin-themes
+     monokai-theme
+     spacegray-theme
      )
 
    ;; A list of packages that cannot be updated.
@@ -226,10 +228,12 @@ It should only modify the values of Spacemacs settings."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes
    '(
-     doom-city-lights
-     kaolin-light
      sanityinc-tomorrow-night
+     kaolin-light
+     doom-city-lights
      doom-nord-light
+     spacegray
+     ;; ayu
      )
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
@@ -490,7 +494,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;;  ;; do not warn if setting variables in .zshrc instead of .zshenv
   ;;  exec-path-from-shell-check-startup-files nil
   ;;  )
-  (add-to-list 'load-path "~/.spacemacs.d/packages/")
+  (add-to-list 'custom-theme-load-path "~/.spacemacs.d/themes/")
   (setq custom-file (concat (getenv "HOME") "/.spacemacs.d/custom.el"))
   (setq local-config-file "~/config.local.el")
   )
@@ -566,7 +570,7 @@ before packages are loaded."
 
   (spaceline-toggle-minor-modes-off)
 
-  (require 'ayu-theme)
+  ;; (load-theme 'ayu)
 
   ;; needed to fix passphrase entry when using easypg
   (setq epa-pinentry-mode 'loopback)

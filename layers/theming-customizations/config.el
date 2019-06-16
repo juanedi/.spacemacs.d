@@ -37,4 +37,6 @@
          (popup-tip-face
           :background "#56697A"
           :foreground "#1D252C"))
+        (monokai
+         (mode-line :box nil))
         ))

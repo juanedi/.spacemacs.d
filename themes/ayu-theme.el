@@ -51,7 +51,7 @@
  '(mode-line-buffer-id ((t ( :box nil :weight bold))))
 
  '(mode-line-inactive ((t (:foreground "#b4b09e" :background "#333942" :box nil :weight light :inherit (mode-line)))))
- '(mode-line ((t (:foreground "#242B38" :background "#333942" :box nil))))
+ '(mode-line ((t (:foreground "#FFFFFF" :background "#333942" :box nil))))
 
  '(isearch ((t (:foreground "#99ccee" :background "#444444"))))
  '(isearch-fail ((t ( :background "#ffaaaa"))))
@@ -136,6 +136,16 @@
 
  ;; Org headers
  '(outline-1 ((t (:background nil))))
+
+ ;; Helm
+ '(helm-source-header ((t (:inherit (info-title-3)))))
+ '(helm-selection ((t (:background "#252B37"))))
+ '(helm-minibuffer-prompt ((t (:background nil :foreground "#FFFFFF"))))
+
+ ;; Misc
+ '(hl-line ((t (:background "#252B37"))))
+ '(vertical-border ((t (:foreground "#343F4C"))))
+ '(fringe ((t (:inherit (default)))))
 ) ;; End face definitions
 
 ;;;###autoload

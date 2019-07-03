@@ -228,12 +228,12 @@ It should only modify the values of Spacemacs settings."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes
    '(
+     (ayu :location local)
      sanityinc-tomorrow-night
      kaolin-light
      doom-city-lights
      doom-nord-light
      spacegray
-     ;; ayu
      )
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
@@ -569,8 +569,6 @@ before packages are loaded."
    )
 
   (spaceline-toggle-minor-modes-off)
-
-  ;; (load-theme 'ayu)
 
   ;; needed to fix passphrase entry when using easypg
   (setq epa-pinentry-mode 'loopback)

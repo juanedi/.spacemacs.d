@@ -139,7 +139,7 @@
  '(ahs-plugin-whole-buffer-face ((t (:inherit (spacemacs-visual-face)))))
 
  ;; Org headers
- '(org-document-title ((t (:height 1.44 :foreground "#FFAE57"))))
+ '(org-document-title ((t (:height 1.44 :foreground "#FFD580"))))
  '(org-level-1 ((t (:foreground "#5CCFE6" :height 1.1))))
  '(org-level-2 ((t (:foreground "#FFAE57" :height 1.1))))
  '(org-level-3 ((t (:foreground "#D4BFFF" :height 1))))

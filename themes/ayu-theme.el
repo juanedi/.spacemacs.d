@@ -39,8 +39,8 @@
  '(shadow ((t (:foreground "#777777" :background nil))))
 
  '(trailing-whitespace ((t (:foreground "#FFFFFF" :background "#C74000"))))
- '(link ((t (:foreground "#00b7f0" :background nil :underline t))))
- '(link-visited ((t (:foreground "#4488cc" :underline t :inherit (link)))))
+ '(link ((t (:foreground "#00B7F0" :background nil :underline t))))
+ '(link-visited ((t (:foreground "#4488CC" :underline t :inherit (link)))))
  '(button ((t (:foreground "#FFFFFF" :background "#444444" :underline t :inherit (link)))))
  '(next-error ((t ( :inherit (region)))))
  '(query-replace ((t ( :inherit (isearch)))))
@@ -50,13 +50,13 @@
  '(mode-line-emphasis ((t ( :weight bold))))
  '(mode-line-buffer-id ((t ( :box nil :weight bold))))
 
- '(mode-line-inactive ((t (:foreground "#b4b09e" :background "#333942" :box nil :weight light :inherit (mode-line)))))
+ '(mode-line-inactive ((t (:foreground "#B4B09E" :background "#333942" :box nil :weight light :inherit (mode-line)))))
  '(mode-line ((t (:foreground "#FFFFFF" :background "#333942" :box nil))))
 
- '(isearch ((t (:foreground "#99ccee" :background "#444444"))))
- '(isearch-fail ((t ( :background "#ffaaaa"))))
- '(lazy-highlight ((t ( :background "#77bbdd"))))
- '(match ((t ( :background "#3388cc"))))
+ '(isearch ((t (:foreground "#99CCEE" :background "#444444"))))
+ '(isearch-fail ((t ( :background "#FFAAAA"))))
+ '(lazy-highlight ((t ( :background "#77BBDD"))))
+ '(match ((t ( :background "#3388CC"))))
 
  '(tooltip ((t (:foreground "black" :background "LightYellow" :inherit (variable-pitch)))))
 
@@ -78,15 +78,15 @@
  '(flymake-warnline ((t (:underline "#009945" :background nil :inherit nil))))
 
  ;;git-gutter
- '(git-gutter:added ((t (:foreground "#609f60" :bold t))))
- '(git-gutter:modified ((t (:foreground "#3388cc" :bold t))))
- '(git-gutter:deleted ((t (:foreground "#cc3333" :bold t))))
+ '(git-gutter:added ((t (:foreground "#609F60" :bold t))))
+ '(git-gutter:modified ((t (:foreground "#3388CC" :bold t))))
+ '(git-gutter:deleted ((t (:foreground "#CC3333" :bold t))))
 
  '(diff-added ((t (:background "#305030"))))
  '(diff-removed ((t (:background "#903010"))))
  '(diff-file-header ((t (:background "#362145"))))
  '(diff-context ((t (:foreground "#E0E4CC"))))
- '(diff-changed ((t (:foreground "#3388cc"))))
+ '(diff-changed ((t (:foreground "#3388CC"))))
  '(diff-hunk-header ((t (:background "#242130"))))
 
 
@@ -110,15 +110,15 @@
  '(font-lock-comment-delimiter-face ((t (:foreground "#5C6773" :italic t))))
 
 ;; Rainbow delimiters
- '(rainbow-delimiters-depth-1-face ((t (:foreground "#4192a1"))))
- '(rainbow-delimiters-depth-2-face ((t (:foreground "#47a0b1"))))
- '(rainbow-delimiters-depth-3-face ((t (:foreground "#55aabb"))))
- '(rainbow-delimiters-depth-4-face ((t (:foreground "#65b2c1"))))
- '(rainbow-delimiters-depth-5-face ((t (:foreground "#75bac7"))))
- '(rainbow-delimiters-depth-6-face ((t (:foreground "#85c2ce"))))
- '(rainbow-delimiters-depth-7-face ((t (:foreground "#95cad4"))))
- '(rainbow-delimiters-depth-8-face ((t (:foreground "#a5d2db"))))
- '(rainbow-delimiters-depth-9-face ((t (:foreground "#b5dae1"))))
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "#4192A1"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "#47A0B1"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "#55AABB"))))
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "#65B2C1"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "#75BAC7"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "#85C2CE"))))
+ '(rainbow-delimiters-depth-7-face ((t (:foreground "#95CAD4"))))
+ '(rainbow-delimiters-depth-8-face ((t (:foreground "#A5D2DB"))))
+ '(rainbow-delimiters-depth-9-face ((t (:foreground "#B5DAE1"))))
  '(rainbow-delimiters-unmatched-face ((t (:foreground "#FF0000"))))
 
  ;; Powerline

@@ -135,7 +135,10 @@
  '(ahs-plugin-whole-buffer-face ((t (:inherit (spacemacs-visual-face)))))
 
  ;; Org headers
- '(outline-1 ((t (:background nil))))
+ '(org-document-title ((t (:height 1.44 :foreground "#FFAE57"))))
+ '(org-level-1 ((t (:foreground "#5CCFE6" :height 1.1))))
+ '(org-level-2 ((t (:foreground "#FFAE57" :height 1.1))))
+ '(org-level-3 ((t (:foreground "#D4BFFF" :height 1))))
 
  ;; Helm
  '(helm-source-header ((t (:inherit (info-title-3)))))

@@ -129,6 +129,10 @@
 
  ;; Company
  '(company-tooltip ((t (:inherit (company-tooltip-search-selection)))))
+ '(company-tooltip-search-selection ((t (:background nil))))
+ '(company-tooltip-selection ((t (:background "#252B37"))))
+ '(company-tooltip-common ((t (:foreground "#FFAE57"))))
+ '(company-scrollbar-fg ((t (:background "#FFAE57"))))
  '(company-scrollbar-bg ((t (:inherit (company-tooltip)))))
 
  ;; Auto highlight symbol

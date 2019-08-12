@@ -117,7 +117,9 @@
 (defun misc/init-direnv ()
   (use-package direnv
     :config
-    (direnv-mode)))
+    (direnv-mode))
+
+  (advice-add 'direnv--show-summary :around #'misc//direnv--decorate-summary))
 
 (defun misc/post-init-auto-highlight-symbol ()
   ;; (spacemacs/toggle-automatic-symbol-highlight-on)

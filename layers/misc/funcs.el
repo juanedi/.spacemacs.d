@@ -112,3 +112,7 @@ if prefix argument ARG is given, switch to it in an other, possibly new window."
   (interactive)
   (when magithub-issue
     (browse-url (alist-get 'html_url magithub-issue))))
+
+(defun misc//direnv--decorate-summary (orig-fun _ _ new-directory)
+  ;; note: we are not calling orig-fun
+  (message "direnv: updated environment for %s" new-directory))

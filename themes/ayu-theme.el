@@ -130,7 +130,7 @@
  ;; Company
  '(company-tooltip ((t (:inherit (company-tooltip-search-selection)))))
  '(company-tooltip-search-selection ((t (:background nil))))
- '(company-tooltip-selection ((t (:background "#252B37"))))
+ '(company-tooltip-selection ((t (:background "#2D333D"))))
  '(company-tooltip-common ((t (:foreground "#FFAE57"))))
  '(company-scrollbar-fg ((t (:background "#FFAE57"))))
  '(company-scrollbar-bg ((t (:inherit (company-tooltip)))))
@@ -143,16 +143,25 @@
  '(org-level-1 ((t (:foreground "#5CCFE6" :height 1.1))))
  '(org-level-2 ((t (:foreground "#FFAE57" :height 1.1))))
  '(org-level-3 ((t (:foreground "#D4BFFF" :height 1))))
+ ;; Org agenda
+ '(org-warning ((t (:foreground "#FFAE57" :height 1))))
+ '(org-scheduled-previously ((t (:foreground "chocolate1" :height 1))))
+ '(org-scheduled-today ((t (:foreground "#FFD580" :height 1))))
 
  ;; Helm
  '(helm-source-header ((t (:inherit (info-title-3)))))
  '(helm-selection ((t (:background "#252B37"))))
  '(helm-minibuffer-prompt ((t (:background nil :foreground "#FFFFFF"))))
+ '(helm-ff-file ((t (:foreground nil))))
+ '(helm-ff-directory ((t (:inherit (helm-ff-file)))))
+ '(helm-selection ((t (:background "#2D333D"))))
 
  ;; Misc
- '(hl-line ((t (:background "#252B37"))))
+ '(hl-line ((t (:background "#2D333D"))))
+
  '(vertical-border ((t (:foreground "#343F4C"))))
  '(fringe ((t (:inherit (default)))))
+ '(line-number-current-line ((t (:inherit (line-number) :foreground "#FFD580"))))
 ) ;; End face definitions
 
 ;;;###autoload

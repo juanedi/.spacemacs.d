@@ -538,10 +538,14 @@ before packages are loaded."
 
    ;; display git gutter on left fringe
    git-gutter-fr+-side 'left-fringe
+
+   ;; split vertically even if the screen is large enough to split horizontally
+   split-height-threshold nil
+
+   mac-command-modifier 'super
    )
 
   (global-company-mode)
-  (setq mac-command-modifier 'super)
 
   (setq
    display-time-24hr-format t

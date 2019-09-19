@@ -13,6 +13,7 @@
    csv
    graphviz
    coffeescript
+   lua
 
    (javascript
     :variables

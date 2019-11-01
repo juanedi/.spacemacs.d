@@ -142,7 +142,8 @@
  '(org-document-title ((t (:height 1.44 :foreground "#FFD580"))))
  '(org-level-1 ((t (:foreground "#5CCFE6" :height 1.1))))
  '(org-level-2 ((t (:foreground "#FFAE57" :height 1.1))))
- '(org-level-3 ((t (:foreground "#D4BFFF" :height 1))))
+ '(org-level-3 ((t (:foreground "#D4BFFF" :height 1.1))))
+
  ;; Org agenda
  '(org-warning ((t (:foreground "#FFAE57" :height 1))))
  '(org-scheduled-previously ((t (:foreground "chocolate1" :height 1))))

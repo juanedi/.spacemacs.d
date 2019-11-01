@@ -557,6 +557,8 @@ before packages are loaded."
   (add-hook 'prog-mode-hook 'centered-cursor-mode)
   (add-hook 'text-mode-hook 'centered-cursor-mode)
 
+  (add-hook 'compilation-mode-hook (lambda () (text-scale-set -0.5)))
+
   (misc/customize-popwin-display-config)
 
   ;; use local version for development

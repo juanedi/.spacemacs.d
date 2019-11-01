@@ -5,6 +5,13 @@
   (rspec-run-single-file (rspec-spec-file-for (buffer-file-name))
                          "--colour --require spec_helper --format doc"))
 
+(defun ruby-exra/rspec-outline ()
+    "Display an outline of specs in the current buffer without actually running them."
+  (interactive)
+  (rspec--autosave-buffer-maybe)
+  (rspec-run-single-file (rspec-spec-file-for (buffer-file-name))
+                         "--colour --dry-run --format doc"))
+
 (defun ruby-extra/current-module-name ()
   (let*
       ((raw-components (ruby-extra//extract-module-segments-from-file-path (buffer-file-name)))

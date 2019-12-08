@@ -24,6 +24,7 @@
     magithub
     direnv
     auto-highlight-symbol
+    helm-projectile
     )
 )
 
@@ -74,14 +75,39 @@
    ))
 
 (defun misc/post-init-projectile ()
-  (setq projectile-switch-project-action 'misc/projectile-home)
+  (setq projectile-switch-project-action 'misc/projectile-home))
 
-  ;; clear cache after switching branches
+(defun misc/post-init-helm-projectile ()
   (use-package magit
     :defer t
     :config
-    (advice-add 'magit-checkout :after 'misc//invalidate-projectile-cache)
-    (advice-add 'magit-reset-internal :after 'misc//invalidate-projectile-cache)))
+    ;; before opening the find-file dialog, check if the current commit the on
+    ;; when we last cleared the cache. if not, rebuild it to make sure we shw a
+    ;; fresh list of files.
+    (advice-add
+     'helm-projectile-find-file
+     :before
+     (lambda (&optional ARG)
+       (let* ((project (projectile-project-root))
+              (current-commit (magit-rev-parse "HEAD"))
+              (last-rebuild (gethash project misc//projectile-cache-invalidation-record)))
+         (when (and
+                project
+                current-commit
+                (not (equal current-commit last-rebuild)))
+           (message "Git HEAD changed! Rebuilding projectile cache")
+           (projectile-invalidate-cache nil)
+           (puthash project current-commit misc//projectile-cache-invalidation-record)))))
+
+    ; after commiting, we track the new commit hash to avoid rebuilding the
+    ; cache unnecessarilly (we can do this because committing doesn't change the index)
+    (add-hook
+     'git-commit-post-finish-hook
+     (lambda ()
+       (puthash
+        (projectile-project-root)
+        (magit-rev-parse "HEAD")
+        misc//projectile-cache-invalidation-record)))))
 
 (defun misc/post-init-ansi-colors ()
   (add-hook 'compilation-filter-hook 'misc//colorize-compilation-buffer))

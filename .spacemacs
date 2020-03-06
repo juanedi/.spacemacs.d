@@ -534,8 +534,6 @@ before packages are loaded."
    ;; use 'old style' osx full screen
    ns-use-native-fullscreen nil
 
-   ;; scroll one line at a time (less "jumpy" than defaults)
-   mouse-wheel-scroll-amount '(1 ((shift) . 1))
    ;; don't accelerate scrolling
    ;; (setq mouse-wheel-progressive-speed nil)
    ;; scroll window under mouse
@@ -558,13 +556,6 @@ before packages are loaded."
 
   (global-company-mode)
 
-  (setq
-   display-time-24hr-format t
-   display-time-day-and-date t
-   display-time-default-load-average nil
-   )
-  (display-time-mode t)
-
   ;; enable centered-cursor for text and programming buffers
   ;; leaves out interactive interpreters, documentation, etc.
   (add-hook 'neotree-mode-hook 'centered-cursor-mode)
@@ -586,6 +577,11 @@ before packages are loaded."
    )
 
   (spaceline-toggle-minor-modes-off)
+
+  ; disabled built-in vc control for git
+  (setq vc-handled-backends (delq 'Git vc-handled-backends))
+  ; don't ask to save unsaved buffers
+  (setq magit-save-repository-buffers nil)
 
   ;; needed to fix passphrase entry when using easypg
   (setq epa-pinentry-mode 'loopback)

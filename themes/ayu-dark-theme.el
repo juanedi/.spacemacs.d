@@ -18,7 +18,6 @@
 
  '(minibuffer-prompt ((t (:foreground "#1278A8" :background nil :weight bold))))
  '(escape-glyph ((t (:foreground "#95E6CB" :background nil))))
- ;; '(highlight ((t (:foreground "#FF7733" :background nil))))
  '(highlight ((t (:foreground nil :background "#253340"))))
  '(shadow ((t (:foreground "#777777" :background nil))))
 

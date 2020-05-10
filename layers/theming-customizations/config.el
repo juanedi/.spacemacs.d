@@ -7,6 +7,32 @@
          (vertical-border
           :background "#232830"
           :foreground "#4f5b67")
+         (mode-line
+          :inherit default
+          :background "#343d46"
+          :family unspecified
+          )
+         (powerline-active1
+          :background "#1c1f26"
+          )
+         (helm-source-header
+          :height 1.1
+          :box (:line-width 4 :color "#232830")
+          :weight unspecified
+          )
+         (header-line
+          :foreground "#FFFFFF"
+          :background "#232830"
+          )
+         (helm-minibuffer-prompt
+          :foreground "#DCA432"
+          :background "#232830"
+          :box (:line-width 2 :color "#232830")
+          )
+         (line-number-current-line
+          :foreground "#DCA432"
+          :background "#343d46"
+          )
          )
         (sanityinc-tomorrow-night
          (popup-tip-face

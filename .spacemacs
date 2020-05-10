@@ -234,12 +234,13 @@ It should only modify the values of Spacemacs settings."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes
    '(
-     (ayu :location local)
-     sanityinc-tomorrow-night
-     kaolin-light
-     doom-city-lights
-     doom-nord-light
+     (ayu-dark :location local)
+     doom-nord
      spacegray
+     kaolin-light
+     doom-molokai
+     sanityinc-tomorrow-night
+     doom-nord-light
      )
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',

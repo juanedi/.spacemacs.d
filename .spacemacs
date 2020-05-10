@@ -553,6 +553,9 @@ before packages are loaded."
    split-height-threshold nil
 
    mac-command-modifier 'super
+
+   ;; navigate directories in helm-ff using arrows
+   helm-ff-lynx-style-map t
    )
 
   (global-company-mode)

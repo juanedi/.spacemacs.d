@@ -37,7 +37,7 @@
 
 (spacemacs/set-leader-keys "o x" 'kill-buffer-and-window)
 
-(spacemacs/set-leader-keys "b S" 'misc/switch-to-org-scratch-buffer)
+(spacemacs/set-leader-keys "b S" 'misc/switch-to-text-scratch-buffer)
 
 ;; Navigation
 (define-key evil-normal-state-map (kbd "C-H") (kbd "^"))

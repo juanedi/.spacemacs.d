@@ -105,18 +105,6 @@ if prefix argument ARG is given, switch to it in an other, possibly new window."
                (not (eq major-mode 'text-mode)))
       (text-mode))))
 
-(defun misc/switch-to-text-scratch-buffer (&optional arg)
-  "Switch to the `*scratch-text*' buffer, creating it first if needed.
-if prefix argument ARG is given, switch to it in an other, possibly new window."
-  (interactive "P")
-  (let ((exists (get-buffer "*scratch-text*")))
-    (if arg
-        (switch-to-buffer-other-window (get-buffer-create "*scratch-text*"))
-      (switch-to-buffer (get-buffer-create "*scratch-text*")))
-    (when (and (not exists)
-               (not (eq major-mode 'text-mode)))
-      (text-mode))))
-
 (defun misc/magithub-browse-current-pr ()
   (interactive)
   (when magithub-issue

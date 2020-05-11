@@ -13,8 +13,7 @@
  '(region ((t (:background "#253340"))))
  '(cursor ((t (:background "#FFCC66"))))
 
- ;; Temporary defaults
- '(linum ((t (:foreground "#29323b" :background "031419"))))
+ '(linum ((t (:foreground "#29323b" :background "#031419"))))
 
  '(minibuffer-prompt ((t (:foreground "#1278A8" :background nil :weight bold))))
  '(escape-glyph ((t (:foreground "#95E6CB" :background nil))))
@@ -61,9 +60,11 @@
  '(flymake-warnline ((t (:underline "#009945" :background nil :inherit nil))))
 
  ;;git-gutter
- '(git-gutter:added ((t (:foreground "#609F60" :bold t))))
- '(git-gutter:modified ((t (:foreground "#3388CC" :bold t))))
- '(git-gutter:deleted ((t (:foreground "#CC3333" :bold t))))
+ '(git-gutter+-added ((t (:foreground "#609F60" :bold t))))
+ '(git-gutter+-modified ((t (:foreground "#3388CC" :bold t))))
+ '(git-gutter+-deleted ((t (:foreground "#CC3333" :bold t))))
+
+
 
  '(diff-added ((t (:background "#305030"))))
  '(diff-removed ((t (:background "#903010"))))
@@ -124,10 +125,10 @@
  '(ahs-plugin-whole-buffer-face ((t (:inherit (spacemacs-visual-face)))))
 
  ;; Org headers
- '(org-document-title ((t (:height 1.44 :foreground "#FFD580"))))
- '(org-level-1 ((t (:foreground "#5CCFE6" :height 1.1))))
- '(org-level-2 ((t (:foreground "#FFAE57" :height 1.1))))
- '(org-level-3 ((t (:foreground "#FF7733" :height 1.1))))
+ '(org-document-title ((t (:height 1.1 :foreground "#FFD580"))))
+ '(org-level-1 ((t (:foreground "#FF7733" :height 1.0))))
+ '(org-level-2 ((t (:foreground "#FFAE57" :height 1.0))))
+ '(org-level-3 ((t (:foreground "#FFD580" :height 1.0))))
 
  ;; Org agenda
  '(org-warning ((t (:foreground "#FFAE57" :height 1))))
@@ -149,7 +150,7 @@
  '(fringe ((t (:inherit (default)))))
  '(line-number-current-line ((t (:inherit (line-number) :foreground "#FFD580"))))
 
- '(spacemacs-insert-face ((t (:background "#FF7733"))))
+ '(spacemacs-insert-face ((t (:background "#FFD580"))))
 
 ) ;; End face definitions
 

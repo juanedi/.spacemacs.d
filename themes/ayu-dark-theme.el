@@ -114,6 +114,8 @@
  '(company-tooltip ((t (:inherit (company-tooltip-search-selection)))))
  '(company-tooltip-search-selection ((t (:background nil))))
  '(company-tooltip-selection ((t (:background "#2D333D"))))
+ '(company-preview ((t (:inherit (company-tooltip)))))
+ '(company-preview-common ((t (:inherit (company-tooltip-common-selection)))))
  '(company-tooltip-common ((t (:foreground "#FFAE57"))))
  '(company-scrollbar-fg ((t (:background "#FFAE57"))))
  '(company-scrollbar-bg ((t (:inherit (company-tooltip)))))
